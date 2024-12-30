@@ -1,0 +1,29 @@
+name: jobs to build and deploy page
+on:
+  push:
+    branches: [main]
+
+jobs:
+  paging_jobs:
+    runs-on: ubuntu-latest
+    name: build page and deploy
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+      - name: setup nodejs
+        run: |
+          npm install
+      - name: fetch prototypes
+        run: |
+          mkdir public/prototypes
+          echo ${{vars.PROTOPEDIA_USERNAME}} 
+          node scripts/fetch_prototype.js ${{vars.PROTOPEDIA_USERNAME}} ${{secrets.PROTOPEDIA_API_KEY}}
+      - name: build pages
+        run: |
+          npm run build
+      - name: Deploy pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: "dist"
+          cname: botalab.tech

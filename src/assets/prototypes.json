@@ -1,0 +1,1186 @@
+{
+    "datetime": "Sun Oct 13 2024 22:02:45 GMT+0900 (Japan Standard Time)",
+    "prototypes": [
+        {
+            "name": "マイクに反応するm5stack-avatarとｽﾀｯｸﾁｬﾝ",
+            "developing_status": 3,
+            "images": [
+                "https://protopedia.net/pic/73305a1f-0e4d-4648-be59-d1adac307ac3.jpg"
+            ],
+            "summary": "ししかわさんのm5stack-avatarを利用して、音楽に合わせて口パクやサーボで動く機能を追加してみました。過去の作品ですが、2024にｽﾀｯｸﾁｬﾝに対応したことで一旦完成＆公開させてください。",
+            "developer": "mongonta555",
+            "team": "",
+            "materials": [
+                "M5Stack",
+                "ｽﾀｯｸﾁｬﾝ",
+                "arduino-esp32"
+            ],
+            "tags": [
+                "arduino",
+                "m5stack_contest_2024",
+                "ｽﾀｯｸﾁｬﾝ"
+            ],
+            "prototype_id": 5724
+        },
+        {
+            "name": "AIｽﾀｯｸﾁｬﾝ - ミニマル(AI Stack-chan Minimal)",
+            "developing_status": 3,
+            "images": [
+                "https://protopedia.net/pic/ea16f06b-59e9-4299-9916-b404aea13ac2.jpg",
+                "https://protopedia.net/pic/cbe8f0cb-ea79-453f-bc7d-e038bef1130e.jpg",
+                "https://protopedia.net/pic/0ed860dd-8fca-4b73-ac39-9e23ad78f438.jpg",
+                "https://protopedia.net/pic/8db1e8cd-8d07-4c34-b1f1-34e097fdab43.jpg",
+                "https://protopedia.net/pic/fa864b75-b0bc-4d80-b9f8-b861c1dee2e7.png"
+            ],
+            "summary": "気軽に始められる”みんなのAI ｽﾀｯｸﾁｬﾝ\" (It's a minimal robot of AI Stack-chan for everyone. )",
+            "developer": "aoya_uta",
+            "team": "",
+            "materials": [
+                "M5 Atom Echo",
+                "ｽﾀｯｸﾁｬﾝ",
+                "arduino-esp32",
+                "ChatGPT API",
+                "html"
+            ],
+            "tags": [
+                "arduino-esp32",
+                "ChatGPT API",
+                "M5Stack",
+                "ｽﾀｯｸﾁｬﾝ"
+            ],
+            "prototype_id": 5384
+        },
+        {
+            "name": "ﾂｸﾛｶﾁｬﾝ2号",
+            "developing_status": 3,
+            "images": [
+                "https://protopedia.net/pic/b1c4e627-4e11-4cf1-b19b-9834c482521c.png"
+            ],
+            "summary": "テックシーカーコレクション2024に、つくろか！実行委員会として出展することにしたので、そこで展示する作品として作成しました。つくろか！の宣伝要員として活躍してもらいます。",
+            "developer": "shi78ge",
+            "team": "つくろか！実行委員会",
+            "materials": [
+                "M5Stack",
+                "ｽﾀｯｸﾁｬﾝ"
+            ],
+            "tags": [
+                "M5Stack",
+                "ｽﾀｯｸﾁｬﾝ"
+            ],
+            "prototype_id": 5379
+        },
+        {
+            "name": "TouchGFXだけを使って作ったｽﾀｯｸﾁｬﾝもどき",
+            "developing_status": 3,
+            "images": [
+                "https://protopedia.net/pic/2f72fefd-fb4f-4ba7-8f3a-63cec6dcd4d5.png",
+                "https://protopedia.net/pic/c613e65c-7ccc-469c-a961-ac191c40f687.png",
+                "https://protopedia.net/pic/9e68c5bb-036f-4c45-bdf5-40f41716e7ae.jpg"
+            ],
+            "summary": "TouchGFXだけで、顔の表情が変わり、画像が飛び上がる、ｽﾀｯｸﾁｬﾝのようなものを作ってみました。",
+            "developer": "610t",
+            "team": "",
+            "materials": [
+                "STM32",
+                "ｽﾀｯｸﾁｬﾝ",
+                "TouchGFX",
+                "STM32U5G9J-DK2"
+            ],
+            "tags": [
+                "TouchGFX",
+                "ｽﾀｯｸﾁｬﾝ"
+            ],
+            "prototype_id": 5204
+        },
+        {
+            "name": "M5Scratch: M5Stack x Scratch1.4",
+            "developing_status": 3,
+            "images": [
+                "https://protopedia.net/pic/55d21017-6985-4e51-829b-8c13ac4d603a.png",
+                "https://protopedia.net/pic/6f85bd55-efe8-4a08-8455-67765ad5387e.png",
+                "https://protopedia.net/pic/a786cc98-ecea-490e-9a13-0d430e92f9b0.png",
+                "https://protopedia.net/pic/bf89354e-f2c4-4e6a-a6d0-6345f2683a80.png"
+            ],
+            "summary": "M5Scratch=M5Stack x Scratch1.4.Let's play M5stack and Scratch 1.4 with M5Scratch!!",
+            "developer": "610t",
+            "team": "",
+            "materials": [
+                "Scratch",
+                "M5Stack",
+                "Arduino",
+                "ｽﾀｯｸﾁｬﾝ"
+            ],
+            "tags": [
+                "arduino",
+                "M5Stack",
+                "Scratch",
+                "ｽﾀｯｸﾁｬﾝ"
+            ],
+            "prototype_id": 5188
+        },
+        {
+            "name": "ドッキング！アトムチャン M（DK-Atom Chan M）",
+            "developing_status": 2,
+            "images": [
+                "https://protopedia.net/pic/77ea4312-d038-4ee3-ba8c-4e74c7858ee1.jpg",
+                "https://protopedia.net/pic/4f3345e3-3121-448e-8c12-0ac22229c0ce.jpg",
+                "https://protopedia.net/pic/cc488843-82f1-47aa-97ad-fb0af9dfb37b.jpg",
+                "https://protopedia.net/pic/4b081c34-3d23-4f85-a065-14a5ea6699dd.jpg"
+            ],
+            "summary": "自身の動作とマイコンロボットをモーションで操縦。”mocopi(IMUセンサ)”や、”TDPT(カメラ検出)”から送られてくるOSC座標データを使用。モノづくり支援を受けた2体目と同時操作可能になった",
+            "developer": "aoya_uta",
+            "team": "",
+            "materials": [
+                "M5Stack",
+                "M5 ATOM Lite",
+                "M5 Atom Echo",
+                "ｽﾀｯｸﾁｬﾝ",
+                "VOICEVOX",
+                "openai whisper",
+                "ChatGPT API",
+                "mocopi",
+                "M5 Atom S3"
+            ],
+            "tags": [
+                "arduino",
+                "ChatGPT",
+                "Motion Controller ",
+                "servo motor",
+                "VOICEVOX"
+            ],
+            "prototype_id": 5141
+        },
+        {
+            "name": "推しｽﾀｯｸﾁｬﾝ",
+            "developing_status": 2,
+            "images": [
+                "https://protopedia.net/pic/de20af64-a5f7-401f-b68c-9754b4fd2a75.png",
+                "https://protopedia.net/pic/932ef64f-3ecf-4750-a5a4-d1ec987e4fbf.jpg",
+                "https://protopedia.net/pic/722ca185-a25d-495e-95b1-5104b9134cce.jpg"
+            ],
+            "summary": "推しぬいがあるなら，推しロボもあったっていいじゃない!!!",
+            "developer": "botamochi6277",
+            "team": "BotaLab",
+            "materials": [
+                "M5Stack",
+                "ｽﾀｯｸﾁｬﾝ"
+            ],
+            "tags": [
+                "ペーパークラフト",
+                "推し活"
+            ],
+            "prototype_id": 5136
+        },
+        {
+            "name": "あなたのドキドキを伝える M5己心電信（みしんでんしん）システム",
+            "developing_status": 2,
+            "images": [
+                "https://protopedia.net/pic/266e4231-319d-410a-8e39-6b9d1697acde.jpg",
+                "https://protopedia.net/pic/1d5c51d3-3239-4011-8f5b-45bdd90842e4.jpg"
+            ],
+            "summary": "心拍センサで読み取ったあなたのドキドキをBluetoothで飛ばし、ピカピカさせたりドキドキさせたりします。",
+            "developer": "kanten_namako",
+            "team": "",
+            "materials": [
+                "M5Stack",
+                "Arduino IDE",
+                "ｽﾀｯｸﾁｬﾝ"
+            ],
+            "tags": [
+                "Arduino IDE",
+                "Bluetooth",
+                "M5Stack",
+                "心拍センサー"
+            ],
+            "prototype_id": 4991
+        },
+        {
+            "name": "ｽﾀｯｸﾁｬﾝとScratchﾁｬﾝ",
+            "developing_status": 2,
+            "images": [
+                "https://protopedia.net/pic/e999f7b2-36dd-4adf-a7f4-bd137d3dcf5d.png",
+                "https://protopedia.net/pic/7fe402a8-5aa2-46ad-b436-547893edf864.png",
+                "https://protopedia.net/pic/0d454f42-5f47-4b7d-b9ae-9128200d148e.png",
+                "https://protopedia.net/pic/3d5af186-c515-43e5-b4d0-e96941942eda.png"
+            ],
+            "summary": "ｽﾀｯｸﾁｬﾝはScratchﾁｬﾝと仲良しです。さあ、一緒に遊ぼ!!",
+            "developer": "610t",
+            "team": "",
+            "materials": [
+                "Scratch",
+                "M5Stack",
+                "ｽﾀｯｸﾁｬﾝ"
+            ],
+            "tags": [
+                "M5Stack",
+                "Scratch",
+                "ｽﾀｯｸﾁｬﾝ"
+            ],
+            "prototype_id": 4967
+        },
+        {
+            "name": "ｽﾀｯｸﾁｬﾝ meets Scratch with M5bitLess",
+            "developing_status": 3,
+            "images": [
+                "https://protopedia.net/pic/b1b36343-34a0-46be-8bda-a8fa90585d17.png",
+                "https://protopedia.net/pic/b71fb5cb-23c5-4966-bec6-51dd8dc009ab.png",
+                "https://protopedia.net/pic/02c64ce3-7975-47c5-89df-c6c24f1a0fcb.png",
+                "https://protopedia.net/pic/41c1b63a-07aa-41de-b13d-cce80b87d7df.png"
+            ],
+            "summary": "Stack-chan meets Scratch.Let's go on an adventurous journey!!ｽﾀｯｸﾁｬﾝがScratchと出逢いました。さあ冒険の旅に出かけよう!!",
+            "developer": "610t",
+            "team": "",
+            "materials": [
+                "M5Stack",
+                "Micro:bit",
+                "Arduino",
+                "ｽﾀｯｸﾁｬﾝ"
+            ],
+            "tags": [
+                "arduino",
+                "M5Stack",
+                "micro:bit",
+                "ｽﾀｯｸﾁｬﾝ"
+            ],
+            "prototype_id": 4957
+        },
+        {
+            "name": "きみの親友イヌえもん",
+            "developing_status": 3,
+            "images": [
+                "https://protopedia.net/pic/06fc4ab1-71ef-4ef9-a6e6-c0f3d903f080.png",
+                "https://protopedia.net/pic/8f11c9ff-06dd-41d3-98f3-c0b5fbfdd550.png",
+                "https://protopedia.net/pic/df810d75-9bf5-45f3-9295-a89b6f0e799e.png",
+                "https://protopedia.net/pic/8e19eaac-d96d-4ccd-ba49-2963b50a69f4.png"
+            ],
+            "summary": "イヌえもんはいつでもきみの味方だよ！いつでもそばにいるし、どんな相談にものるし、ほんとうににこまったときは然るべき対応を取ってあげるからね🐶",
+            "developer": "chiiirotty",
+            "team": "伸び伸び太",
+            "materials": [
+                "Unity",
+                "LINE Messaging API",
+                "enebular",
+                "obniz",
+                "Web Speech API",
+                "M5Stack",
+                "ｽﾀｯｸﾁｬﾝ",
+                "VOICEVOX",
+                "openai whisper",
+                "ChatGPT API"
+            ],
+            "tags": [
+                "ChatGPT",
+                "enebular",
+                "Line Messaging API",
+                "M5Stack",
+                "obniz",
+                "unity",
+                "VOICEVOX",
+                "WebSpeechAPI",
+                "ｽﾀｯｸﾁｬﾝ"
+            ],
+            "prototype_id": 4888
+        },
+        {
+            "name": "DK-AtomChan Mark Ⅱ - 着せ替え遊び",
+            "developing_status": 3,
+            "images": [
+                "https://protopedia.net/pic/5ef9b13b-d428-4bd9-ad33-ed789436da6b.jpg",
+                "https://protopedia.net/pic/6d8e379d-0faa-43b9-ae83-b3e6e5c9aff9.jpg",
+                "https://protopedia.net/pic/9429142f-acf2-4149-984b-ebafa52306b9.jpg",
+                "https://protopedia.net/pic/8b3199fb-7aaf-4345-9b4a-4bd125a62c2c.jpg"
+            ],
+            "summary": "姪でも興味を持てるような、MarkⅡベースの「ダイソーのエリーちゃんの着せ替え服」で遊べるバージョン。またオフライン音声認識センサーに声をかけると、キビキビ反応してくれます。 ",
+            "developer": "aoya_uta",
+            "team": "",
+            "materials": [
+                "AquesTalk（ゆっくりボイス）",
+                "M5Stack",
+                "M5 Atom Echo",
+                "ｽﾀｯｸﾁｬﾝ",
+                "M5 Atom S3"
+            ],
+            "tags": [
+                "arduino-esp32",
+                "LEGO",
+                "servo motor"
+            ],
+            "prototype_id": 4886
+        },
+        {
+            "name": "ドッキング！アトムチャン マーク2（DK-AtomChan Mark Ⅱ）",
+            "developing_status": 3,
+            "images": [
+                "https://protopedia.net/pic/025e7d70-ff31-4951-a7cb-941d059441fc.jpg",
+                "https://protopedia.net/pic/db5e5bbf-eb2d-411b-9386-53ff55ec42fa.jpg",
+                "https://protopedia.net/pic/5c1390aa-bb5d-4acf-a395-308c33088690.jpg",
+                "https://protopedia.net/pic/98d95fec-76c7-4611-b7b8-85075c592aa4.jpg",
+                "https://protopedia.net/pic/88b738a8-4c3f-4f35-b82d-b10affa3f9ce.jpg"
+            ],
+            "summary": "手乗りコミュニケーションロボット。前回の\"ドッキング！Atom-Chan\"をベースに、アクティブにダンスが踊れるよう、新フレームとServo+Morterで制御。人型←→車型へ変形して走行も可能。",
+            "developer": "aoya_uta",
+            "team": "",
+            "materials": [
+                "M5Stack",
+                "M5 Atom Echo",
+                "ｽﾀｯｸﾁｬﾝ",
+                "VOICEVOX",
+                "ChatGPT API",
+                "M5 Atom S3"
+            ],
+            "tags": [
+                "arduino-esp32",
+                "LEGO",
+                "OpenAI",
+                "servo motor"
+            ],
+            "prototype_id": 4660
+        },
+        {
+            "name": "Function Calling対応AIｽﾀｯｸﾁｬﾝ",
+            "developing_status": 3,
+            "images": [
+                "https://protopedia.net/pic/fb6e36c0-2a38-4f40-b077-e13e0450b6dd.png"
+            ],
+            "summary": "robo8080さんのAIｽﾀｯｸﾁｬﾝをベースに、ChatGPTのFunction Callingを使って様々な便利機能を実装しました。",
+            "developer": "motoh0917",
+            "team": "",
+            "materials": [
+                "M5Stack",
+                "PlatformIO",
+                "ｽﾀｯｸﾁｬﾝ",
+                "VOICEVOX",
+                "ChatGPT API"
+            ],
+            "tags": [
+                "ChatGPT API",
+                "M5Stack",
+                "PlatformIO",
+                "VOICEVOX",
+                "ｽﾀｯｸﾁｬﾝ"
+            ],
+            "prototype_id": 4587
+        },
+        {
+            "name": "乾電池動作式レールガン搭載迎撃型ｽﾀｯｸﾁｬﾝ「ﾚｯｸｽﾁｬﾝ」",
+            "developing_status": 3,
+            "images": [
+                "https://protopedia.net/pic/7b97cbd2-9284-4c81-a8ca-d7b21fe7a4ff.jpg",
+                "https://protopedia.net/pic/b8df3f88-0476-4c8e-b9b9-6e8212d9e5ac.jpg"
+            ],
+            "summary": "ｽｰﾊﾟｰｶﾜｲｲｺﾐｭﾆｹｰｼｮﾝﾛﾎﾞｯﾄ「ｽﾀｯｸﾁｬﾝ」に武装を追加した派生ｽﾀｯｸﾁｬﾝです！レドームとレールガンがいつでもあなたを追尾している…かも。",
+            "developer": "tn340",
+            "team": "",
+            "materials": [
+                "M5Stack",
+                "PlatformIO",
+                "Fusion360",
+                "ｽﾀｯｸﾁｬﾝ"
+            ],
+            "tags": [
+                "M5Stack_contest_2023",
+                "StackChan"
+            ],
+            "prototype_id": 4548
+        },
+        {
+            "name": "AtomS3-chan feat. toio core cube",
+            "developing_status": 3,
+            "images": [
+                "https://protopedia.net/pic/d9aa4fef-0e48-4b12-90d6-2d01e7b07332.jpg",
+                "https://protopedia.net/pic/2cf0a3a3-34d5-4d62-a6ad-ed9f4938ae18.jpg",
+                "https://protopedia.net/pic/8bf81c77-83bc-4a08-82d3-bbd352301766.jpg",
+                "https://protopedia.net/pic/cf74e7aa-8a5e-4418-bb09-fcb7a68b19e7.png",
+                "https://protopedia.net/pic/0bed1a0c-1e60-4aac-9ddd-ead4e2ec238c.png"
+            ],
+            "summary": "M5 AtomS3とtoio core cube一つでスタックチャンの弟分、AtomS3-chanを作ってみました。",
+            "developer": "kenichi",
+            "team": "",
+            "materials": [
+                "toio",
+                "PlatformIO",
+                "Fusion360",
+                "3Dプリンター",
+                "ｽﾀｯｸﾁｬﾝ",
+                "arduino-esp32",
+                "M5 Atom S3",
+                "ATOM Mate for toio"
+            ],
+            "tags": [
+                "arduino",
+                "M5ATOM S3",
+                "StackChan",
+                "toio",
+                "ｽﾀｯｸﾁｬﾝ"
+            ],
+            "prototype_id": 4439
+        },
+        {
+            "name": "手乗りｱﾄﾑﾁｬﾝ",
+            "developing_status": 3,
+            "images": [
+                "https://protopedia.net/pic/99f354fe-a636-4092-af9d-d066a9ecb3dd.jpg"
+            ],
+            "summary": "小さなｽﾀｯｸﾁｬﾝが口を開いたり首を振る。時にはこちらの動作に反応してくれる。そんな可愛いを作りたくて制作しました。",
+            "developer": "tie2",
+            "team": "",
+            "materials": [
+                "PlatformIO",
+                "M5 Atom Echo",
+                "ｽﾀｯｸﾁｬﾝ",
+                "VOICEVOX",
+                "ChatGPT API",
+                "M5 Atom S3"
+            ],
+            "tags": [
+                "ChatGPT API",
+                "M5Stack",
+                "VOICEVOX",
+                "ｽﾀｯｸﾁｬﾝ"
+            ],
+            "prototype_id": 4385
+        },
+        {
+            "name": "DMXタックチャン",
+            "developing_status": 3,
+            "images": [
+                "https://protopedia.net/pic/2261b966-09a6-4d30-96e1-d59a7b8fa296.png"
+            ],
+            "summary": "ｽﾀｯｸﾁｬﾝにカラダ付けたくなったとき、そこにDMXのムービングライトがありました。",
+            "developer": "makoragi",
+            "team": "",
+            "materials": [
+                "M5Stack",
+                "ｽﾀｯｸﾁｬﾝ"
+            ],
+            "tags": [
+                "DMX",
+                "M5Stack_contest_2023"
+            ],
+            "prototype_id": 4366
+        },
+        {
+            "name": "#ｽﾀｯｸﾁｬﾝ をUnitV2の音声認識でコントロール",
+            "developing_status": 3,
+            "images": [
+                "https://protopedia.net/pic/aa83c7cc-24cb-45de-91c6-c98b31b15a67.png",
+                "https://protopedia.net/pic/331d604e-b900-4ff8-8d58-1d3b72cb8298.jpg",
+                "https://protopedia.net/pic/e105ebf8-5a52-438a-8a89-3dfc99e92228.jpg"
+            ],
+            "summary": "M5Stack UnitV2 USBにマイクを接続し、大語彙連続音声認識エンジンJuliusをインストールして音声認識を行いｽﾀｯｸﾁｬﾝをコントロールできるようにしました。",
+            "developer": "mongonta555",
+            "team": "",
+            "materials": [
+                "M5Stack",
+                "M5Stack UnitV2",
+                "PlatformIO",
+                "ｽﾀｯｸﾁｬﾝ",
+                "arduino-esp32"
+            ],
+            "tags": [
+                "M5Stack",
+                "M5Stack_contest_2023",
+                "StackChan",
+                "UnitV2",
+                "ｽﾀｯｸﾁｬﾝ"
+            ],
+            "prototype_id": 4287
+        },
+        {
+            "name": "赤外線バトルユニット搭載ラジコンｽﾀｯｸﾁｬﾝ",
+            "developing_status": 3,
+            "images": [
+                "https://protopedia.net/pic/56f60a06-c4be-4464-a8fc-66e2738479c0.png",
+                "https://protopedia.net/pic/b857a6a8-267f-4fb2-9698-1df99cb91a0e.jpg",
+                "https://protopedia.net/pic/d7e25d34-93bd-4fa6-b621-8ca273095854.png"
+            ],
+            "summary": "MFKyoto2023でNiiさんのｽﾀﾝｸﾁｬﾝと戦わせたいと思い作製しました。また5/1に大阪で開催されたM5Stack meetupの展示にも活用しました。",
+            "developer": "shi78ge",
+            "team": "",
+            "materials": [
+                "M5Stack",
+                "Arduino IDE",
+                "ｽﾀｯｸﾁｬﾝ"
+            ],
+            "tags": [
+                "M5Stack",
+                "M5Stack_contest_2023",
+                "ｽﾀｯｸﾁｬﾝ"
+            ],
+            "prototype_id": 4253
+        },
+        {
+            "name": "ｽﾀﾝﾃﾞｨﾝｸﾞ ｽﾀｯｸﾁｬﾝ",
+            "developing_status": 3,
+            "images": [
+                "https://protopedia.net/pic/d20b6eb0-de41-494e-b54a-983691e9957b.png",
+                "https://protopedia.net/pic/8728a2f6-8ec8-45af-8887-068d49b7d2f1.png",
+                "https://protopedia.net/pic/1715cd77-eb6d-4225-b8aa-dc963f435570.png"
+            ],
+            "summary": "飛べる！踊れる！ｽﾀｯｸﾁｬﾝ!! なｽﾀｯｸﾁｬﾝのフィギュアです．The action figure of stackchan can pose flying, dancing, etc.",
+            "developer": "botamochi6277",
+            "team": "BotaLab",
+            "materials": [
+                "M5Stack Core2",
+                "ｽﾀｯｸﾁｬﾝ"
+            ],
+            "tags": [
+                "3Dプリンタ",
+                "Action Figure"
+            ],
+            "prototype_id": 4203
+        },
+        {
+            "name": "お散歩ちゃん（移動できるスタックチャン）",
+            "developing_status": 3,
+            "images": [
+                "https://protopedia.net/pic/133ee8d0-2cfa-4b9d-b8d7-85d09513e816.jpg",
+                "https://protopedia.net/pic/ef16aa3f-49ec-4e01-8c4f-980ba6d8fb53.png",
+                "https://protopedia.net/pic/18788c4a-03dd-4919-a982-37874a8ebab1.png",
+                "https://protopedia.net/pic/02b3891d-53a1-4c93-a89c-6b196fbdd674.jpg"
+            ],
+            "summary": "可愛いｽﾀｯｸﾁｬﾝの見た目ほぼそのままで移動可能にする夢のシステム。足の内部にモーターを格納しています。",
+            "developer": "ushineko3",
+            "team": "",
+            "materials": [
+                "ESP32",
+                "M5Stack",
+                "MicroPython",
+                "ｽﾀｯｸﾁｬﾝ"
+            ],
+            "tags": [
+                "M5Stack",
+                "M5Stack_contest_2023",
+                "MicroPython",
+                "ｽﾀｯｸﾁｬﾝ"
+            ],
+            "prototype_id": 4191
+        },
+        {
+            "name": "ちっちゃいAIｽﾀｯｸﾁｬﾝ「AIｱﾄﾑﾁｬﾝ」",
+            "developing_status": 3,
+            "images": [
+                "https://protopedia.net/pic/051af148-1f67-4ba7-a18d-b5235e77a852.png",
+                "https://protopedia.net/pic/f7447630-0293-4456-be56-fcbfd91df38a.jpg",
+                "https://protopedia.net/pic/c4bf2d2c-248c-41c1-8e13-81be30fce520.jpg"
+            ],
+            "summary": "ちっちゃいAIｽﾀｯｸﾁｬﾝを作りたくてrobo8080さんのAIｽﾀｯｸﾁｬﾝをM5STACK ATOM S3に移植してみました",
+            "developer": "box5d",
+            "team": "",
+            "materials": [
+                "PlatformIO",
+                "Google Cloud Speech-to-Text ",
+                "ｽﾀｯｸﾁｬﾝ",
+                "VOICEVOX",
+                "ChatGPT API",
+                "M5 Atom S3"
+            ],
+            "tags": [
+                "ChatGPT",
+                "M5Stack",
+                "ｽﾀｯｸﾁｬﾝ"
+            ],
+            "prototype_id": 4182
+        },
+        {
+            "name": "感情表現するAIｽﾀｯｸﾁｬﾝ",
+            "developing_status": 3,
+            "images": [
+                "https://protopedia.net/pic/9edbca5e-7bb5-495e-949c-5becff366c1d.jpg",
+                "https://protopedia.net/pic/3b35f301-ae5d-4a1b-8249-246e87286e4f.jpg",
+                "https://protopedia.net/pic/ff2dd2f3-58e0-4bc2-b706-46de6126b370.jpg",
+                "https://protopedia.net/pic/e6267400-6445-442f-8e42-e262731fd8fa.jpg"
+            ],
+            "summary": "ChatGPT連携AIｽﾀｯｸﾁｬﾝです。感情に合わせて表情や声、LEDの色も変わります。このAIｽﾀｯｸﾁｬﾝの感情表現は事前に用意した物ではなく、ChatGPTが自動的に生成しています。",
+            "developer": "robo8080",
+            "team": "robo8080",
+            "materials": [
+                "VoiceText Web API",
+                "M5Stack",
+                "ｽﾀｯｸﾁｬﾝ",
+                "ChatGPT API"
+            ],
+            "tags": [
+                "ChatGPT",
+                "M5Stack",
+                "M5Stack_contest_2023",
+                "ｽﾀｯｸﾁｬﾝ"
+            ],
+            "prototype_id": 4105
+        },
+        {
+            "name": "科学教育プラットフォームとしてのM5Stackとｽﾀｯｸﾁｬﾝ",
+            "developing_status": 3,
+            "images": [
+                "https://protopedia.net/pic/1c7ce5db-2955-40c0-b701-7a32dd2e242a.jpg",
+                "https://protopedia.net/pic/a45eebed-9500-48d6-ba9f-d03fdffa522a.jpg",
+                "https://protopedia.net/pic/e1e1bb5a-bb91-4d3d-b775-23d432aa9c95.jpg",
+                "https://protopedia.net/pic/ab77295b-f83f-4c54-9770-5b738021e503.jpg",
+                "https://protopedia.net/pic/4d8a90d7-204c-47cd-9d88-56f44120379e.jpg"
+            ],
+            "summary": "M5Stack社が販売している様々なセンサー類+ｽﾀｯｸﾁｬﾝのボディを使って、小・中学生が自ら組み立てて使用できるおもちゃ＆測定機器のアイデアです。",
+            "developer": "kanten_namako",
+            "team": "",
+            "materials": [
+                "M5Stack",
+                "UIFlow",
+                "ｽﾀｯｸﾁｬﾝ"
+            ],
+            "tags": [
+                "M5Stack",
+                "UIFlow",
+                "センサー",
+                "ｽﾀｯｸﾁｬﾝ"
+            ],
+            "prototype_id": 4098
+        },
+        {
+            "name": "AIｽﾀｯｸﾁｬﾝを作った。",
+            "developing_status": 3,
+            "images": [
+                "https://protopedia.net/pic/f8bca910-24af-45b6-8e1a-716972486d81.jpg",
+                "https://protopedia.net/pic/b4091165-55b3-4af6-9b13-799a4a895497.jpg",
+                "https://protopedia.net/pic/28d87bb5-2940-450a-82f5-b91da5b296d3.jpg"
+            ],
+            "summary": "ウェイクワードで起動、音声認識でChatGPTを使って会話できる小型ロボット「AIｽﾀｯｸﾁｬﾝ」を作った。(音声合成にWeb版Voicevox:ずんだもんを使用しています。)",
+            "developer": "robo8080",
+            "team": "robo8080",
+            "materials": [
+                "M5Stack",
+                "Google Cloud Speech-to-Text ",
+                "ｽﾀｯｸﾁｬﾝ",
+                "VOICEVOX",
+                "openai whisper",
+                "ChatGPT API"
+            ],
+            "tags": [
+                "AIｽﾀｯｸﾁｬﾝ",
+                "ChatGPT",
+                "M5Stack_contest_2023",
+                "VUI",
+                "音声合成",
+                "音声認識",
+                "ｽﾀｯｸﾁｬﾝ"
+            ],
+            "prototype_id": 4052
+        },
+        {
+            "name": "M5Stackによるじゃんけんゲーム",
+            "developing_status": 3,
+            "images": [
+                "https://protopedia.net/pic/a037f88b-9e5a-4838-aded-99c86ad275b6.jpg"
+            ],
+            "summary": "これはM5Stack Basicを使ったじゃんけんゲームです。This is a rock-paper-scissors game using M5Stack Basic.",
+            "developer": "moruxa",
+            "team": "",
+            "materials": [
+                "M5Stack",
+                "ｽﾀｯｸﾁｬﾝ"
+            ],
+            "tags": [
+                "Arduino IDE",
+                "M5Stack",
+                "PlatformIO",
+                "VSCode",
+                "ｽﾀｯｸﾁｬﾝ"
+            ],
+            "prototype_id": 4015
+        },
+        {
+            "name": "ドッキング！Atom-Chan",
+            "developing_status": 2,
+            "images": [
+                "https://protopedia.net/pic/43e0179a-25a1-4d01-8388-437dc7158dd2.jpg",
+                "https://protopedia.net/pic/0267c5ab-df63-493f-aeca-a9a8815e0dd9.jpg",
+                "https://protopedia.net/pic/1ac3e879-9af2-461d-b4c1-be330f687f0b.jpg",
+                "https://protopedia.net/pic/2b1b8347-ef4e-42f0-bf9c-325811204997.jpg"
+            ],
+            "summary": "AtomS3に「音声認識：スマホ、チャット：OpenAI API、発話：VOICEVOXでコミュニケーションできるようにした人型LEGO」です。シンプルな手乗りサイズと拡張性が売りです。",
+            "developer": "aoya_uta",
+            "team": "",
+            "materials": [
+                "M5 Atom Echo",
+                "ｽﾀｯｸﾁｬﾝ",
+                "VOICEVOX",
+                "ChatGPT API",
+                "M5 Atom S3"
+            ],
+            "tags": [
+                "arduino-esp32",
+                "ChatGPT API",
+                "LEGO",
+                "servo motor"
+            ],
+            "prototype_id": 3998
+        },
+        {
+            "name": "LEDパネルチャン",
+            "developing_status": 2,
+            "images": [
+                "https://protopedia.net/pic/8dd4a047-88f1-4216-9854-9e709a426e95.jpg"
+            ],
+            "summary": "毎朝同じことで怒ってる気がするので、あまりものの部材で解決を試みました。",
+            "developer": "higedaruma",
+            "team": "",
+            "materials": [
+                "ESP32",
+                "Google Calender API",
+                "ｽﾀｯｸﾁｬﾝ",
+                "Google Apps Script",
+                "Open-Meteo"
+            ],
+            "tags": [
+                "IoT"
+            ],
+            "prototype_id": 3924
+        },
+        {
+            "name": "【反省はしても後悔はしたくない】無駄遣いｼﾞｬｯｼﾞﾁｬﾝ",
+            "developing_status": 3,
+            "images": [
+                "https://protopedia.net/pic/9fe54be0-81e1-4648-9930-3c14711a8dac.jpg"
+            ],
+            "summary": "休日の楽しいお買い物で、買うかどうするか悩んで、買っても後悔、買わなくても後悔という経験はありませんか？そんなときｼﾞｬｯｼﾞﾁｬﾝがお買い物をサポートします。",
+            "developer": "am003004",
+            "team": "",
+            "materials": [
+                "M5Stack Core2",
+                "ｽﾀｯｸﾁｬﾝ"
+            ],
+            "tags": [
+                "M5Stack",
+                "M5Stack_contest_2023",
+                "ｽﾀｯｸﾁｬﾝ"
+            ],
+            "prototype_id": 3916
+        },
+        {
+            "name": "ｽﾀｯｸﾁｬﾝの頭部をレゴバスに移植 ⇒ ﾊﾞｽﾀｯｸﾁｬﾝ(亜種)爆誕ｗ",
+            "developing_status": 3,
+            "images": [
+                "https://protopedia.net/pic/5c859804-0edc-4084-bee8-b3b61275a3d8.jpg",
+                "https://protopedia.net/pic/7517dcdf-f5fd-402c-bd7e-0776f4ec8c01.jpg",
+                "https://protopedia.net/pic/9eed4832-c311-4ad3-b584-ffbbd4e3efbe.jpg",
+                "https://protopedia.net/pic/b41cee67-585e-4c6f-8016-7c5900f30c7e.jpg",
+                "https://protopedia.net/pic/cb951a3a-5a6b-469a-aac1-c2b85bf7c6c8.jpg"
+            ],
+            "summary": "2023年3月上旬、ｽﾀｯｸﾁｬﾝにChatGPTが移植され、世間でバズったのを契機に私もちょっと挑戦してみました。今回はレゴバスに移植して【ﾊﾞｽﾀｯｸﾁｬﾝ(亜種)】を作ってみました。",
+            "developer": "t_mac116",
+            "team": "",
+            "materials": [
+                "M5Stack",
+                "Arduino IDE",
+                "PlatformIO",
+                "M5Stack Core2",
+                "ｽﾀｯｸﾁｬﾝ",
+                "VSCodeAPI"
+            ],
+            "tags": [
+                "Core2",
+                "LEGO",
+                "M5Stack",
+                "M5Stack Core2 for AWS",
+                "M5StackCore2",
+                "バス",
+                "ｽﾀｯｸﾁｬﾝ",
+                "ﾊﾞｽﾀｯｸﾁｬﾝ"
+            ],
+            "prototype_id": 3844
+        },
+        {
+            "name": "うちのスタックチャン",
+            "developing_status": 3,
+            "images": [
+                "https://protopedia.net/pic/2675b81f-7b9a-40cc-b2bf-a9a64e7b9e13.png"
+            ],
+            "summary": "スタックチャンにちょっとした便利機能を実装してみました。",
+            "developer": "yamaccu",
+            "team": "",
+            "materials": [
+                "M5Stack",
+                "Arduino",
+                "ｽﾀｯｸﾁｬﾝ"
+            ],
+            "tags": [
+                "M5Stack",
+                "ｽﾀｯｸﾁｬﾝ"
+            ],
+            "prototype_id": 3287
+        },
+        {
+            "name": "#ｽﾀｯｸﾁｬﾝ とアッチ向いてホイ",
+            "developing_status": 3,
+            "images": [
+                "https://protopedia.net/pic/b524f997-b73a-43fd-8e8d-c5bc760c538c.jpg",
+                "https://protopedia.net/pic/7329a712-085e-4d4c-b6e6-5aa512f4c547.jpg",
+                "https://protopedia.net/pic/e23c6de9-6ec3-43a1-8a81-f84fef52ac4e.jpg"
+            ],
+            "summary": "GestureUnitを使って、ｽﾀｯｸﾁｬﾝ とアッチ向いてホイ（看那边）で遊びます。I created a game that can be played with stack-chan.",
+            "developer": "mongonta555",
+            "team": "",
+            "materials": [
+                "AquesTalk（ゆっくりボイス）",
+                "M5Stack",
+                "Arduino IDE",
+                "ｽﾀｯｸﾁｬﾝ"
+            ],
+            "tags": [
+                "Aquestalk",
+                "M5Stack",
+                "M5Stack_contest_2022",
+                "ｽﾀｯｸﾁｬﾝ"
+            ],
+            "prototype_id": 3271
+        },
+        {
+            "name": "手のひらサイズの移動ロボ「ｸﾛｰﾗﾁｬﾝ」作ってみた",
+            "developing_status": 3,
+            "images": [
+                "https://protopedia.net/pic/f4068795-8f75-4ec0-9db9-8eb77fc21a78.jpg",
+                "https://protopedia.net/pic/85bcdc05-0483-4dc7-8bfd-367f1bfaf06b.jpg",
+                "https://protopedia.net/pic/5f9dc98f-9cfd-4857-82a5-7e84981bd3cf.png",
+                "https://protopedia.net/pic/f0fa1d69-77f2-489f-b444-82f91a2454d6.png"
+            ],
+            "summary": "クローラでどこへでも突き進む「ｸﾛｰﾗﾁｬﾝ」です。It is a \"crawler chan\" that pushes forward anywhere with a crawler.",
+            "developer": "ponda",
+            "team": "",
+            "materials": [
+                "PlatformIO",
+                "M5Stack Core2",
+                "ｽﾀｯｸﾁｬﾝ",
+                "タミヤ連結式クローラー"
+            ],
+            "tags": [
+                "ｽﾀｯｸﾁｬﾝ"
+            ],
+            "prototype_id": 3258
+        },
+        {
+            "name": "M5Stackでクロマトグラフィー /The Simplest M5Chromato-System ",
+            "developing_status": 3,
+            "images": [
+                "https://protopedia.net/pic/986cbf15-1493-44e2-a539-dca70f857fcf.jpg",
+                "https://protopedia.net/pic/df7c5107-f635-4eab-a87f-5d5aaa7bf9a0.jpg",
+                "https://protopedia.net/pic/220797cd-ce7b-4b26-b56f-72109b9c353a.jpg",
+                "https://protopedia.net/pic/aa1fd0a7-d881-478c-bd94-5460fb8915a0.jpg"
+            ],
+            "summary": "科学イベントでの参加型実験の定番「ペーパークロマトグラフィー」にM5Stack＋カラーセンサーで構成された簡単な装置を組み合わせ、高度な分析装置「高速液体クロマトグラフィー」をまねた装置を作ります。",
+            "developer": "kanten_namako",
+            "team": "",
+            "materials": [
+                "M5Stack",
+                "UIFlow",
+                "ｽﾀｯｸﾁｬﾝ",
+                "M5Stack用カラーセンサーユニット"
+            ],
+            "tags": [
+                "chromatography",
+                "Education",
+                "M5Stack",
+                "STEM教育",
+                "UIFlow",
+                "クロマトグラフィー",
+                "実験",
+                "理科教室",
+                "理科教育",
+                "ｽﾀｯｸﾁｬﾝ"
+            ],
+            "prototype_id": 3257
+        },
+        {
+            "name": "BUSTACK-chan (「ﾊﾞｽﾀｯｸﾁｬﾝ」)",
+            "developing_status": 3,
+            "images": [
+                "https://protopedia.net/pic/74318347-afa7-470e-9aeb-7865ea400e4b.jpg",
+                "https://protopedia.net/pic/04e2b0eb-0f13-4463-a942-9244e2341db9.jpg",
+                "https://protopedia.net/pic/b52c6be5-79ad-4947-86c6-51793b626f54.png"
+            ],
+            "summary": "I have a bus, I have a Stack-chan, ah, BUSTACK-chan.  「ｽﾀｯｸﾁｬﾝ」と「ﾊﾞｽ」を掛け合わせ、「ﾊﾞｽﾀｯｸﾁｬﾝ」を作りました。",
+            "developer": "katsuyoshi",
+            "team": "",
+            "materials": [
+                "M5Stack",
+                "Fusion360",
+                "NeoPixel",
+                "ｽﾀｯｸﾁｬﾝ"
+            ],
+            "tags": [
+                "BUS",
+                "M5Stack",
+                "Neopixel",
+                "ｽﾀｯｸﾁｬﾝ"
+            ],
+            "prototype_id": 3251
+        },
+        {
+            "name": "スティックCチャン(StickC-chan) feat. toio core cube",
+            "developing_status": 3,
+            "images": [
+                "https://protopedia.net/pic/fbed85a6-2895-4bfc-add5-06f3726e6e66.jpg",
+                "https://protopedia.net/pic/49b1f51c-72eb-4a25-ad34-52bfe9c55c46.png",
+                "https://protopedia.net/pic/312d64c2-dd09-4989-84bc-700d95df019f.png",
+                "https://protopedia.net/pic/a627016d-b37f-4564-8b2d-fc73f2bd0509.png",
+                "https://protopedia.net/pic/3349fca6-8ad6-4cc9-bca6-49446aa483f1.png"
+            ],
+            "summary": "M5StickC Plusとtoio core cubeでスタックチャンの弟分？スティックCチャン(StickC-chan)を作ってみました。",
+            "developer": "kenichi",
+            "team": "",
+            "materials": [
+                "toio",
+                "M5StickC Plus",
+                "Arduino IDE",
+                "ｽﾀｯｸﾁｬﾝ"
+            ],
+            "tags": [
+                "M5Stack_contest_2022",
+                "M5StickC",
+                "M5StickC Plus",
+                "toio",
+                "ロボット",
+                "ｽﾀｯｸﾁｬﾝ"
+            ],
+            "prototype_id": 3238
+        },
+        {
+            "name": "親指サイズの #ｽﾀｯｸﾁｬﾝ Radiko プレイヤー",
+            "developing_status": 3,
+            "images": [
+                "https://protopedia.net/pic/98c37143-8c94-4dd2-b735-9a45c5104377.png",
+                "https://protopedia.net/pic/17a65c50-4f9f-4a03-99d9-d9581f7fe782.png"
+            ],
+            "summary": "こばさん(@wakwak_koba)の #M5Stack Radikoプレイヤーをアバターとレベルメーター同時に表示ができるように改造。さらにM5StickC Plusで動くようにしました。",
+            "developer": "robo8080",
+            "team": "robo8080",
+            "materials": [
+                "M5Stack",
+                "ｽﾀｯｸﾁｬﾝ"
+            ],
+            "tags": [
+                "M5Stack",
+                "M5Stack_contest_2022"
+            ],
+            "prototype_id": 3159
+        },
+        {
+            "name": "キコキコ　スタックチャン　",
+            "developing_status": 2,
+            "images": [
+                "https://protopedia.net/pic/5a5fe2b8-f623-41da-8423-1b3694a4ee9d.png",
+                "https://protopedia.net/pic/4ea324f0-1f1a-403f-b0b4-cb4f0610f600.png",
+                "https://protopedia.net/pic/bac3d72a-0dcb-456d-995b-dd603c055279.png",
+                "https://protopedia.net/pic/298d3537-b98b-44d3-927c-5267589ba716.png"
+            ],
+            "summary": "スタックチャンを自分の中のロボットのイメージでアレンジしてみました。今のところゼンマイはただの飾りですが、動きと連動するようなものにしたいと思ってます。",
+            "developer": "pikapika_light",
+            "team": "",
+            "materials": [
+                "M5Stack",
+                "Arduino",
+                "ｽﾀｯｸﾁｬﾝ"
+            ],
+            "tags": [
+                "#M5Stack",
+                "#ｽﾀｯｸﾁｬﾝ"
+            ],
+            "prototype_id": 3135
+        },
+        {
+            "name": "スタンクチャン",
+            "developing_status": 3,
+            "images": [
+                "https://protopedia.net/pic/d004b9a0-ce07-404e-a54d-0d1b3cb5911f.jpg",
+                "https://protopedia.net/pic/0afeeada-94e4-463f-9215-f0e666e345b4.jpg",
+                "https://protopedia.net/pic/76af1d1b-d4e2-4247-99f7-c666917a5506.jpg",
+                "https://protopedia.net/pic/38591fb2-278e-4f0f-8af0-5678a24f4f5f.jpg"
+            ],
+            "summary": "あのスタックチャンが戦車型ラジコンに！？机の上で赤外線通信バトルを楽しめます。",
+            "developer": "neet2121",
+            "team": "",
+            "materials": [
+                "M5Stack",
+                "M5 Atom Matrix",
+                "ｽﾀｯｸﾁｬﾝ"
+            ],
+            "tags": [
+                "M5Stack_contest",
+                "M5Stack_contest_2022",
+                "ラジコン",
+                "ｽﾀｯｸﾁｬﾝ"
+            ],
+            "prototype_id": 3132
+        },
+        {
+            "name": "＃ｽﾀｯｸﾁｬﾝ と会話出来るようにしてみた",
+            "developing_status": 3,
+            "images": [
+                "https://protopedia.net/pic/d1babc9c-c3c6-45ab-bd10-52faceb7770f.jpg"
+            ],
+            "summary": "iPhone + 会話AI mebo APIを使って ｽﾀｯｸﾁｬﾝ と会話出来るようにしました。会話AI APIで自動的に会話を生成します。",
+            "developer": "robo8080",
+            "team": "robo8080",
+            "materials": [
+                "M5Stack",
+                "ｽﾀｯｸﾁｬﾝ",
+                "mebo",
+                "VOICEVOX"
+            ],
+            "tags": [
+                "M5Stack",
+                "M5Stack_contest_2022",
+                "ｽﾀｯｸﾁｬﾝ"
+            ],
+            "prototype_id": 3116
+        },
+        {
+            "name": "AIｽﾀｯｸﾁｬﾝ同士の会話",
+            "developing_status": 3,
+            "images": [
+                "https://protopedia.net/pic/83af1ee7-c582-4bcf-9aff-798616daa16a.jpg"
+            ],
+            "summary": "iPhone + Chaplus 雑談応答APIを使って ｽﾀｯｸﾁｬﾝ 同士で会話出来るようにしました。雑談応答APIで自動的に会話を生成します。動画の最後の方笑っちゃいました🤣",
+            "developer": "robo8080",
+            "team": "robo8080",
+            "materials": [
+                "VoiceText Web API",
+                "M5Stack",
+                "ｽﾀｯｸﾁｬﾝ",
+                "Chaplus"
+            ],
+            "tags": [
+                "M5Stack",
+                "M5Stack_contest_2022",
+                "ｽﾀｯｸﾁｬﾝ"
+            ],
+            "prototype_id": 3086
+        },
+        {
+            "name": "RTKｽﾀｯｸﾁｬﾝとお出かけ",
+            "developing_status": 3,
+            "images": [
+                "https://protopedia.net/pic/961ae99c-50ef-4b6c-bc38-e020b0105133.png",
+                "https://protopedia.net/pic/d28fea0b-264f-4678-ba5c-08ed93c6a48b.jpg",
+                "https://protopedia.net/pic/e61fb9a2-5e46-497f-b162-8433eabdfc0b.jpg"
+            ],
+            "summary": "#ｽﾀｯｸﾁｬﾝ　にCAT-M UNITとRTK-GPS受信機を使いcm精度のGPSトラッカーとその位置の緯度経度標高を表示します",
+            "developer": "mnlt18",
+            "team": "",
+            "materials": [
+                "M5Stack",
+                "Ambient",
+                "ｽﾀｯｸﾁｬﾝ"
+            ],
+            "prototype_id": 3079
+        },
+        {
+            "name": "ｵﾌﾞﾅｲｽﾞﾁｬﾝ",
+            "developing_status": 2,
+            "images": [
+                "https://protopedia.net/pic/8bd609df-efb9-48e9-89cc-cdb085518dc1.jpg",
+                "https://protopedia.net/pic/e5a76bf5-8768-45ff-8ec7-9e85bd54f8c1.jpg",
+                "https://protopedia.net/pic/b3b50a2d-2b28-4f8c-8887-60d4430944b4.jpg",
+                "https://protopedia.net/pic/834fe1ee-cb4e-4622-8bdf-fa34756e5386.jpg",
+                "https://protopedia.net/pic/e72373e0-2a41-4f96-91c0-63a8a803250b.jpg"
+            ],
+            "summary": "ｽﾀｯｸﾁｬﾝのｵﾌﾞﾅｲｽﾞver",
+            "developer": "ryotakobayashi",
+            "team": "",
+            "materials": [
+                "obniz",
+                "3Dプリンター",
+                "ｽﾀｯｸﾁｬﾝ"
+            ],
+            "tags": [
+                "JavaScript",
+                "ｵﾌﾞﾅｲｽﾞﾁｬﾝ",
+                "ｽﾀｯｸﾁｬﾝ"
+            ],
+            "prototype_id": 3072
+        },
+        {
+            "name": "ﾏｲｸﾛﾋﾞｯﾄﾁｬﾝ",
+            "developing_status": 3,
+            "images": [
+                "https://protopedia.net/pic/de1e9087-2657-46c8-a1b7-958f77154349.jpg",
+                "https://protopedia.net/pic/3c3f6db2-fa69-4719-ad48-90a28f8e2e83.jpg",
+                "https://protopedia.net/pic/c54cfbbf-7e9f-4c65-8919-79e8fcf174e5.jpg",
+                "https://protopedia.net/pic/5a14d2a1-e912-4b9e-82a4-3a67955b63a3.jpg",
+                "https://protopedia.net/pic/4dbeed24-3546-417e-8a16-16572aee57a2.jpg"
+            ],
+            "summary": "ｽﾀｯｸﾁｬﾝ大好きな娘が自分でもプログラミングできるよう、マイクロビットでﾏｲｸﾛﾋﾞｯﾄﾁｬﾝをつくりました。「たのしいマイクロビットコンテスト2022」エントリー作品です。",
+            "developer": "airpocket",
+            "team": "",
+            "materials": [
+                "Micro:bit",
+                "ｽﾀｯｸﾁｬﾝ"
+            ],
+            "tags": [
+                "micro:bit",
+                "ｽﾀｯｸﾁｬﾝ",
+                "ﾏｲｸﾛﾋﾞｯﾄﾁｬﾝ"
+            ],
+            "prototype_id": 3068
+        },
+        {
+            "name": "スタックチャン　フラワー",
+            "developing_status": 2,
+            "images": [
+                "https://protopedia.net/pic/3603350e-3492-489a-b87c-3c55e6f402a4.png",
+                "https://protopedia.net/pic/1b821a1b-faf7-4ef3-8733-40e1123046a9.png",
+                "https://protopedia.net/pic/d27363ce-821f-4a63-95dd-f6c6e15ac5b0.png",
+                "https://protopedia.net/pic/614f1c4d-59d2-4675-853f-f87d98c9c98b.png",
+                "https://protopedia.net/pic/0ed5ddf8-e316-4243-b776-7b6eee0b7a17.png"
+            ],
+            "summary": "自分なりのスタックチャンを考えたらこうなりました。",
+            "developer": "pikapika_light",
+            "team": "",
+            "materials": [
+                "M5Stack",
+                "5V 3PIN RGB LEDライト",
+                "ｽﾀｯｸﾁｬﾝ"
+            ],
+            "tags": [
+                "M5Stack",
+                "ｽﾀｯｸﾁｬﾝ"
+            ],
+            "prototype_id": 3035
+        },
+        {
+            "name": "スタックチャン（Stack-chan）",
+            "developing_status": 3,
+            "images": [
+                "https://protopedia.net/pic/aa9886bf-87a9-4312-a8db-3c11c6fe227a.jpg",
+                "https://protopedia.net/pic/3438f02d-80a5-4545-8c0a-d9356bf07e13.jpg",
+                "https://protopedia.net/pic/99627d41-76ee-4e60-b7a1-04661acbda03.jpg",
+                "https://protopedia.net/pic/b7e440f6-6cf5-461e-89d3-d00f9f1ab9f3.jpg",
+                "https://protopedia.net/pic/e4d27377-0a47-4b7b-aeed-1aa8df0d5cdc.png"
+            ],
+            "summary": "コミュニケーションロボットを、あなたの手に。",
+            "developer": "meganetaaan",
+            "team": "ししかわとゆかいななかまたち/ SSKW and good fellows",
+            "materials": [
+                "M5Stack",
+                "Moddable",
+                "Google Cloud Text-to-Speech",
+                "M5Stack UnitV2",
+                "MediaPipe Holistic",
+                "MediaPipe Face Mesh",
+                "ｽﾀｯｸﾁｬﾝ",
+                "VOICEVOX",
+                "ChatGPT API"
+            ],
+            "tags": [
+                "JavaScript",
+                "M5Stack",
+                "M5Stack_contest_2021",
+                "TypeScript",
+                "VUI",
+                "XUI",
+                "かわいい",
+                "コミュニケーションロボット",
+                "ロボット",
+                "ｽﾀｯｸﾁｬﾝ"
+            ],
+            "prototype_id": 2345
+        }
+    ]
+}
