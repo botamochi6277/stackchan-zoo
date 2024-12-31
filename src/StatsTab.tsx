@@ -82,7 +82,9 @@ const MaterialsCard = (props: {
     };
   });
 
-  const plotItems = tmpItems.filter((item) => item.counts >= minCounts);
+  const plotItems = tmpItems
+    .filter((item) => item.counts >= minCounts)
+    .sort((a, b) => b.counts - a.counts);
 
   return (
     <Card>
@@ -107,6 +109,7 @@ const MaterialsCard = (props: {
             },
           ]}
           layout="horizontal"
+          margin={{ left: 120 }}
           grid={{ vertical: true }}
         />
       </CardContent>
