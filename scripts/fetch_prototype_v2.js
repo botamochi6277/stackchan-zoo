@@ -50,6 +50,7 @@ const dumpPrototypeFromRawData = (rawData /* : PrototypeV2RawData*/) => {
 
   const proto/*: PrototypeV2Data*/ = {
     name: rawData.prototypeNm,
+    id: rawData.id,
     developingStatus: rawData.status,
     mainImage: rawData.mainUrl, // string(url)
     summary: rawData.summary,
@@ -57,7 +58,6 @@ const dumpPrototypeFromRawData = (rawData /* : PrototypeV2RawData*/) => {
     team: rawData.teamNm,
     materials: rawData.materials?.split('|'),
     tags: rawData.tags?.split('|'),
-    prototypeId: rawData.id, // number
     updateDate: rawData.updateDate, // string
     createDate: rawData.createDate, // string
     awards: rawData.awards?.split('|'),

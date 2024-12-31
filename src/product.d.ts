@@ -29,3 +29,22 @@ type PrototypeData = {
   materials: string[],
   prototype_id: number,
 }
+
+
+type PrototypeV2Data = {
+  name: string,
+  id: number,
+  developingStatus: number,
+  mainImage?: string
+  summary?: string,
+  developers?: string[],
+  team?: styring,
+  materials?: string[],
+  tags?: string[],
+  updateDate: string,
+  createDate: string,
+  awards?: string[],
+  events?: string[],
+  viewCount: number,
+  goodCount: number,
+}

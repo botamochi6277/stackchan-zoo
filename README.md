@@ -22,3 +22,7 @@ npm install
 ```console
 npm run dev
 ```
+
+## References
+
+- [ProtoPedia API Ver 2.0](https://protopediav2.docs.apiary.io/#)
