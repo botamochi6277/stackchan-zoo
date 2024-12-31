@@ -1,8 +1,8 @@
 {
   "team_name": "Stack-chan Zoo",
   "user_name": "",
-  "avatar_image": "https://avatars.githubusercontent.com/u/14128408?v=4",
-  "header_image": "https://github.com/botamochi6277/botalab/assets/14128408/370721be-1e7a-4a28-b45c-0b44ff3ff4db",
+  "avatar_image": "./stackchan-icon.svg",
+  "header_image": "",
   "description": "ProtoPediaに登録されているｽﾀｯｸﾁｬﾝ達を並べて見たり，比較できる非公式ファンサイトです",
   "socials": [
     {
