@@ -16,7 +16,6 @@ import ThumbUpIcon from "@mui/icons-material/ThumbUp";
 import UpdateIcon from "@mui/icons-material/Update";
 
 // assets
-import prototypes from "./assets/prototypes_v2.json";
 
 import ProtoTypeCard from "./PrototypeCard";
 
@@ -41,7 +40,9 @@ const OrderButtons = (props: {
   return buttons;
 };
 
-export default function ProtoPediaList() {
+export default function ProtoPediaList(props: {
+  prototypes: PrototypeV2Data[];
+}) {
   const [order, setOrder] = React.useState("ids");
 
   const mySort = (a: PrototypeV2Data, b: PrototypeV2Data, order: string) => {
@@ -58,7 +59,7 @@ export default function ProtoPediaList() {
         return 1;
     }
   };
-  const items = prototypes.prototypes
+  const items = props.prototypes
     .sort((a, b) => mySort(a, b, order))
     .map((p) => {
       return <ProtoTypeCard prototype={p} />;

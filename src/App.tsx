@@ -13,10 +13,12 @@ import MyAppBar from "./MyAppBar";
 import MyTabs from "./MyTabs";
 import ProtoPediaList from "./ProtoPediaList";
 import TeamHeader from "./TeamHeader";
+import StatsTab from "./StatsTab";
 
 // assets
 import profile from "./assets/profile.json";
 import my_theme from "./theme";
+import protopediaData from "./assets/prototypes_v2.json";
 
 function App() {
   const [theme, setTheme] = React.useState(
@@ -76,7 +78,13 @@ function App() {
             items={[
               {
                 label: "ProtoPedia Works",
-                content: <ProtoPediaList />,
+                content: (
+                  <ProtoPediaList prototypes={protopediaData.prototypes} />
+                ),
+              },
+              {
+                label: "Stats",
+                content: <StatsTab prototypes={protopediaData.prototypes} />,
               },
             ]}
           />

@@ -8,4 +8,11 @@ export default defineConfig({
     ? "botalab"
     : "./",
   plugins: [react()],
+  optimizeDeps: {
+    include: [
+      '@emotion/react',
+      '@emotion/styled',
+      '@mui/material/Tooltip'
+    ],
+  },
 })
