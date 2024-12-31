@@ -16,8 +16,8 @@ jobs:
       - name: fetch prototypes
         run: |
           mkdir public/prototypes
-          echo ${{vars.PROTOPEDIA_USERNAME}} 
-          node scripts/fetch_prototype.js ${{vars.PROTOPEDIA_USERNAME}} ${{secrets.PROTOPEDIA_API_KEY}}
+          echo ${{vars.PROTOPEDIA_MATERIAL_NAME}} 
+          node scripts/fetch_prototype_v2.js ${{vars.PROTOPEDIA_MATERIAL_NAME}} ${{secrets.PROTOPEDIA_API_KEY}}
       - name: build pages
         run: |
           npm run build
@@ -26,4 +26,3 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: "dist"
-          cname: botalab.tech
