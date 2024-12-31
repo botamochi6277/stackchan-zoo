@@ -57,15 +57,24 @@ const TrendChartCard = (props: { prototypes: PrototypeV2Data[] }) => {
 
 const MaterialsCard = (props: {
   prototypes: PrototypeV2Data[];
+  target: "material" | "tag";
   minCounts?: number;
 }) => {
+  const getter = (p: PrototypeV2Data) => {
+    if (props.target === "material") {
+      return p.materials;
+    } else {
+      // tags
+      return p.tags;
+    }
+  };
   // num. of materials
   const allMaterials = props.prototypes.reduce((prev, next) => {
-    if (!next.materials) {
+    if (!getter(next)) {
       return prev;
     }
 
-    return prev.concat(next.materials);
+    return prev.concat(getter(next) ?? []);
   }, [] as string[]);
 
   const uniqueMaterials = Array.from(new Set(allMaterials));
@@ -90,7 +99,7 @@ const MaterialsCard = (props: {
     <Card>
       <CardContent>
         <Typography component="div" variant="h6">
-          Materials
+          {`${props.target[0].toUpperCase()}${props.target.slice(1)}s`}
         </Typography>
         <BarChart
           //   width={500}
@@ -98,8 +107,7 @@ const MaterialsCard = (props: {
           series={[
             {
               data: plotItems.map((item) => item.counts),
-              label: "#materials",
-              id: "pvId",
+              label: `#${props.target}s`,
             },
           ]}
           yAxis={[
@@ -121,7 +129,13 @@ const StatsTab = (props: { prototypes: PrototypeV2Data[] }) => {
   return (
     <Box>
       <TrendChartCard prototypes={props.prototypes} />
-      <MaterialsCard prototypes={props.prototypes} minCounts={5} />
+      <MaterialsCard
+        prototypes={props.prototypes}
+        target="material"
+        minCounts={5}
+      />
+
+      <MaterialsCard prototypes={props.prototypes} target="tag" minCounts={5} />
     </Box>
   );
 };
