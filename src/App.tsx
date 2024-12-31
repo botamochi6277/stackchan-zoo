@@ -9,7 +9,7 @@ import {
 import * as React from "react";
 
 // custom
-import ExhibitionTimeline from "./ExhibitionTimeline";
+
 import MyAppBar from "./MyAppBar";
 import MyTabs from "./MyTabs";
 import ProtoPediaList from "./ProtoPediaList";
@@ -50,7 +50,7 @@ function App() {
           {/* Banner/Header Image */}
           {/* https://jp.cyberlink.com/blog/photoeditor/1755/best-photo-software-to-make-youtube-banners#:~:text=YouTube%20ヘッダー・バナーサイズと作成時の注意点,-ヘッダー・バナー作成&text=以下の図のよう,のサイズで作ります%E3%80%82 */}
           {/* https://stackoverflow.com/questions/61263669/does-material-ui-have-an-image-component */}
-          <Box
+          {/* <Box
             component="img"
             sx={{
               aspectRatio: { xs: 1546 / 423, md: 1855 / 423, lg: 2560 / 423 },
@@ -60,7 +60,7 @@ function App() {
             }}
             alt="Channel Art"
             src={profile.header_image}
-          />
+          /> */}
 
           <TeamHeader
             team_name={profile.team_name}
@@ -73,7 +73,12 @@ function App() {
 
           <MyTabs
             key={"my_tabs"}
-            items={[{ label: "ProtoPedia Works", content: <ProtoPediaList /> }]}
+            items={[
+              {
+                label: "ProtoPedia Works",
+                content: <ProtoPediaList />,
+              },
+            ]}
           />
         </Stack>
       </Container>

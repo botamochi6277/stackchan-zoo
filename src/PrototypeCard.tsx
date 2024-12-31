@@ -63,7 +63,7 @@ const ChipsBox = (props: {
           color="secondary"
           onClick={() => setOpen(false)}
         />
-      ) : mats.length > 2 ? (
+      ) : mats.length > breakpoint ? (
         <Chip
           icon={<MoreHorizIcon />}
           size="small"
