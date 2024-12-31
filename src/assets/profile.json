@@ -7,28 +7,13 @@
   "socials": [
     {
       "name": "GitHub",
-      "link": "https://github.com/botamochi6277",
+      "link": "https://github.com/meganetaaan/stack-chan",
       "badge": "https://img.shields.io/badge/GitHub-grey?style=for-the-badge&logo=github"
     },
     {
-      "name": "twitter",
-      "link": "https://twitter.com/botamochi6277",
-      "badge": "https://custom-icon-badges.demolab.com/badge/twitter-gray.svg?style=for-the-badge&logo=twitter&logoSource=feather"
-    },
-    {
-      "name": "Zenn",
-      "link": "https://zenn.dev/botamochi6277",
-      "badge": "https://img.shields.io/badge/Zenn-grey?style=for-the-badge&logo=zenn"
-    },
-    {
-      "name": "GrabCad",
-      "link": "https://grabcad.com/botamochi-1",
-      "badge": "https://custom-icon-badges.demolab.com/badge/GrabCAD-gray.svg?style=for-the-badge&logo=box&logoSource=feather"
-    },
-    {
-      "name": "Thingiverse",
-      "link": "https://www.thingiverse.com/botamochi/designs",
-      "badge": "https://img.shields.io/badge/Thingiverse-grey?style=for-the-badge&logo=thingiverse"
+      "name": "ProtoPedia",
+      "link": "https://protopedia.net/material/833",
+      "badge": "https://custom-icon-badges.demolab.com/badge/ProtoPedia-gray.svg?style=for-the-badge&logo=hexagon&logoSource=feather"
     }
   ]
 }

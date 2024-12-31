@@ -45,6 +45,7 @@ function App() {
             name={profile.team_name}
             theme={theme}
             onToggleTheme={() => toggleTheme(theme)}
+            avatarUrl={profile.avatar_image}
           />
           {/* Banner/Header Image */}
           {/* https://jp.cyberlink.com/blog/photoeditor/1755/best-photo-software-to-make-youtube-banners#:~:text=YouTube%20ヘッダー・バナーサイズと作成時の注意点,-ヘッダー・バナー作成&text=以下の図のよう,のサイズで作ります%E3%80%82 */}

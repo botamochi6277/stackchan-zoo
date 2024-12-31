@@ -16,17 +16,20 @@ const MyAppBar = (props: {
   theme: Theme;
   onToggleTheme?: any; // (event: ChangeEvent<HTMLInputElement>, checked: boolean) => void)
   name: string;
+  avatarUrl?: string;
 }) => {
   return (
     <AppBar position="static" color="primary" enableColorOnDark>
       <Container maxWidth="xl">
         <Toolbar disableGutters>
-          {/* <ArchitectureIcon sx={{ display: { md: 'flex' }, mr: 1 }} /> */}
-          <Avatar
-            alt="avatar"
-            src="https://avatars.githubusercontent.com/u/14128408?v=4"
-            sx={{ display: { md: "flex" }, mr: 1 }}
-          />
+          {props.avatarUrl ? (
+            <Avatar
+              alt="avatar"
+              src={props.avatarUrl}
+              sx={{ display: { md: "flex" }, mr: 1 }}
+            />
+          ) : null}
+
           <Typography
             variant="h6"
             noWrap
