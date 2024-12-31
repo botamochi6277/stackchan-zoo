@@ -2,11 +2,8 @@ import * as React from "react";
 // mui
 import {
   Box,
-  Button,
-  Stack,
   IconButton,
   Typography,
-  List,
   ListItem,
   ListItemText,
 } from "@mui/material";

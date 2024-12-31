@@ -10,6 +10,7 @@ import {
   Box,
   Stack,
   Chip,
+  IconButton,
 } from "@mui/material";
 import CountBadge from "./CountBadge";
 import DevelopingStatusBadge from "./DevelopingStatusBadge";
@@ -56,21 +57,21 @@ const ChipsBox = (props: {
         />
       ))}
       {open ? (
-        <Chip
-          icon={<ChevronLeftIcon />}
+        <IconButton
           size="small"
-          variant="outlined"
           color="secondary"
           onClick={() => setOpen(false)}
-        />
+        >
+          <ChevronLeftIcon />
+        </IconButton>
       ) : mats.length > breakpoint ? (
-        <Chip
-          icon={<MoreHorizIcon />}
+        <IconButton
           size="small"
-          variant="outlined"
           color="secondary"
           onClick={() => setOpen(true)}
-        />
+        >
+          <MoreHorizIcon />
+        </IconButton>
       ) : null}
     </Box>
   );

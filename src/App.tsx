@@ -1,5 +1,4 @@
 import {
-  Box,
   Container,
   CssBaseline,
   Stack,
