@@ -2,7 +2,7 @@
 // mui
 import { Card, CardContent, Typography, Box } from "@mui/material";
 import { LineChart } from "@mui/x-charts/LineChart";
-// import { BarChart } from "@mui/x-charts/BarChart";
+import { BarChart } from "@mui/x-charts/BarChart";
 
 const TrendChartCard = (props: { prototypes: PrototypeV2Data[] }) => {
   const createdYears = props.prototypes.map((obj) => {
@@ -55,38 +55,72 @@ const TrendChartCard = (props: { prototypes: PrototypeV2Data[] }) => {
   );
 };
 
-// const MaterialsCard = (props: { prototypes: PrototypeV2Data[] }) => {
-//   // num. of materials
-//   const allMaterials = props.prototypes.reduce((prev, next) => {
-//     if (!next.materials) {
-//       return prev;
-//     }
+const MaterialsCard = (props: {
+  prototypes: PrototypeV2Data[];
+  minCounts?: number;
+}) => {
+  // num. of materials
+  const allMaterials = props.prototypes.reduce((prev, next) => {
+    if (!next.materials) {
+      return prev;
+    }
 
-//     return prev.concat(next.materials);
-//   }, [] as string[]);
+    return prev.concat(next.materials);
+  }, [] as string[]);
 
-//   const uniqueMaterials = Array.from(new Set(allMaterials));
+  const uniqueMaterials = Array.from(new Set(allMaterials));
+  const minCounts = props.minCounts ?? 10;
 
-//   const materialCount = uniqueMaterials.map(
-//     (mat) => allMaterials.filter((m) => m === mat).length
-//   );
+  const materialCount = uniqueMaterials.map(
+    (mat) => allMaterials.filter((m) => m === mat).length
+  );
 
-//   return (
-//     <Card>
-//       <CardContent>
-//         <BarChart
-//           width={500}
-//           height={300}
-//           series={[{ data: materialCount, label: "pv", id: "pvId" }]}
-//           xAxis={[{ data: uniqueMaterials, scaleType: "band" }]}
-//         />
-//       </CardContent>
-//     </Card>
-//   );
-// };
+  const tmpItems = uniqueMaterials.map((mat, idx) => {
+    return {
+      name: mat,
+      counts: materialCount[idx],
+    };
+  });
+
+  const plotItems = tmpItems.filter((item) => item.counts >= minCounts);
+
+  return (
+    <Card>
+      <CardContent>
+        <Typography component="div" variant="h6">
+          Materials
+        </Typography>
+        <BarChart
+          //   width={500}
+          height={300}
+          series={[
+            {
+              data: plotItems.map((item) => item.counts),
+              label: "#materials",
+              id: "pvId",
+            },
+          ]}
+          yAxis={[
+            {
+              data: plotItems.map((item) => item.name),
+              scaleType: "band",
+            },
+          ]}
+          layout="horizontal"
+          grid={{ vertical: true }}
+        />
+      </CardContent>
+    </Card>
+  );
+};
 
 const StatsTab = (props: { prototypes: PrototypeV2Data[] }) => {
-  return <Box>{<TrendChartCard prototypes={props.prototypes} />}</Box>;
+  return (
+    <Box>
+      <TrendChartCard prototypes={props.prototypes} />
+      <MaterialsCard prototypes={props.prototypes} minCounts={5} />
+    </Box>
+  );
 };
 
 export default StatsTab;
