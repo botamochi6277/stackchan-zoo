@@ -7,13 +7,18 @@
   "socials": [
     {
       "name": "GitHub",
-      "link": "https://github.com/meganetaaan/stack-chan",
+      "link": "https://github.com/botamochi6277/stackchan-zoo",
       "badge": "https://img.shields.io/badge/GitHub-grey?style=for-the-badge&logo=github"
     },
     {
       "name": "ProtoPedia",
-      "link": "https://protopedia.net/material/833",
+      "link": "https://protopedia.net/prototype/6477",
       "badge": "https://custom-icon-badges.demolab.com/badge/ProtoPedia-gray.svg?style=for-the-badge&logo=hexagon&logoSource=feather"
+    },
+    {
+      "name": "ｽﾀｯｸﾁｬﾝ API",
+      "link": "https://protopedia.net/material/833",
+      "badge": "https://custom-icon-badges.demolab.com/badge/stack_chan_Material-gray.svg?style=for-the-badge&logo=box&logoSource=feather"
     }
   ]
 }
