@@ -117,7 +117,7 @@ const MaterialsCard = (props: {
             },
           ]}
           layout="horizontal"
-          margin={{ left: 120 }}
+          margin={{ left: 160 }}
           grid={{ vertical: true }}
         />
       </CardContent>

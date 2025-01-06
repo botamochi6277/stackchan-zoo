@@ -14,6 +14,7 @@ import MyTabs from "./MyTabs";
 import ProtoPediaList from "./ProtoPediaList";
 import TeamHeader from "./TeamHeader";
 import StatsTab from "./StatsTab";
+import NetworkTab from "./NetworkTab";
 
 // assets
 import profile from "./assets/profile.json";
@@ -85,6 +86,10 @@ function App() {
               {
                 label: "Stats",
                 content: <StatsTab prototypes={protopediaData.prototypes} />,
+              },
+              {
+                label: "Networks",
+                content: <NetworkTab prototypes={protopediaData.prototypes} />,
               },
             ]}
           />
