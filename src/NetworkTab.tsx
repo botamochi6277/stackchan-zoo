@@ -1,12 +1,24 @@
-import { Card, CardContent, Typography, Box, Palette } from "@mui/material";
+import * as React from "react";
+import {
+  Card,
+  CardContent,
+  CardActions,
+  Typography,
+  Box,
+  Palette,
+  TextField,
+  MenuItem,
+} from "@mui/material";
+
+type LayoutName = "random" | "circle" | "concentric" | "grid" | "cose";
 
 import CytoscapeComponent from "react-cytoscapejs";
-
 const MyNetwork = (props: {
   prototypes: PrototypeV2Data[];
   target: "material" | "event";
   palette: Palette;
 }) => {
+  const [layout, setLayout] = React.useState<LayoutName>("cose");
   const getter = (p: PrototypeV2Data) => {
     if (props.target === "material") {
       return p.materials;
@@ -92,6 +104,7 @@ const MyNetwork = (props: {
     },
   ].concat(nodeStyle as any[]) as cytoscape.Stylesheet[];
   // https://js.cytoscape.org/#layouts
+
   return (
     <Card>
       <CardContent>
@@ -103,10 +116,26 @@ const MyNetwork = (props: {
             elements={elements}
             style={{ height: "400px" }}
             stylesheet={stylesheet}
-            layout={{ name: "cose", padding: 10 }}
+            layout={{ name: layout, padding: 10 }}
           />
         </Box>
       </CardContent>
+      <CardActions>
+        <TextField
+          id="filled-select-layout"
+          select
+          label="Layout"
+          variant="outlined"
+          value={layout}
+          onChange={(ev) => setLayout(ev.target.value as LayoutName)}
+        >
+          {["random", "circle", "concentric", "grid", "cose"].map((s) => (
+            <MenuItem key={`layout-select-${s}`} value={s}>
+              {s}
+            </MenuItem>
+          ))}
+        </TextField>
+      </CardActions>
     </Card>
   );
 
