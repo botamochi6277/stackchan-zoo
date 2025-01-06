@@ -1,10 +1,11 @@
-import { Card, CardContent, Typography, Box } from "@mui/material";
+import { Card, CardContent, Typography, Box, Palette } from "@mui/material";
 
 import CytoscapeComponent from "react-cytoscapejs";
 
 const MyNetwork = (props: {
   prototypes: PrototypeV2Data[];
   target: "material" | "event";
+  palette: Palette;
 }) => {
   const getter = (p: PrototypeV2Data) => {
     if (props.target === "material") {
@@ -77,6 +78,18 @@ const MyNetwork = (props: {
         "background-color": "#888",
       },
     },
+    {
+      selector: ".prototype:active",
+      css: {
+        "background-color": props.palette.primary.dark,
+        "text-outline-width": 2,
+        "text-outline-color": props.palette.primary.dark,
+        "outline-width": 2,
+        color: "white",
+        content: "data(name)",
+        "text-valign": "top",
+      },
+    },
   ].concat(nodeStyle as any[]) as cytoscape.Stylesheet[];
   // https://js.cytoscape.org/#layouts
   return (
@@ -90,7 +103,7 @@ const MyNetwork = (props: {
             elements={elements}
             style={{ height: "400px" }}
             stylesheet={stylesheet}
-            layout={{ name: "cose", padding: 5 }}
+            layout={{ name: "cose", padding: 10 }}
           />
         </Box>
       </CardContent>
@@ -100,10 +113,17 @@ const MyNetwork = (props: {
   // NOTE compound: grouping with parents
 };
 
-const NetworkTab = (props: { prototypes: PrototypeV2Data[] }) => {
+const NetworkTab = (props: {
+  prototypes: PrototypeV2Data[];
+  palette: Palette;
+}) => {
   return (
     <Box>
-      <MyNetwork prototypes={props.prototypes} target="event" />
+      <MyNetwork
+        prototypes={props.prototypes}
+        target="event"
+        palette={props.palette}
+      />
     </Box>
   );
 };

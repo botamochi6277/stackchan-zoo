@@ -89,7 +89,12 @@ function App() {
               },
               {
                 label: "Networks",
-                content: <NetworkTab prototypes={protopediaData.prototypes} />,
+                content: (
+                  <NetworkTab
+                    prototypes={protopediaData.prototypes}
+                    palette={theme.palette}
+                  />
+                ),
               },
             ]}
           />
