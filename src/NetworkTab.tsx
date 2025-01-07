@@ -8,23 +8,29 @@ import {
   Palette,
   TextField,
   MenuItem,
+  Stack,
 } from "@mui/material";
 
 type LayoutName = "random" | "circle" | "concentric" | "grid" | "cose";
 
 import CytoscapeComponent from "react-cytoscapejs";
-const MyNetwork = (props: {
+const MaterialNetwork = (props: {
   prototypes: PrototypeV2Data[];
-  target: "material" | "event";
+  target: "material" | "event" | "tag" | "developer";
   palette: Palette;
 }) => {
   const [layout, setLayout] = React.useState<LayoutName>("cose");
   const getter = (p: PrototypeV2Data) => {
-    if (props.target === "material") {
-      return p.materials;
-    } else {
-      // events
-      return p.events;
+    switch (props.target) {
+      case "event":
+        return p.events;
+      case "tag":
+        return p.tags;
+      case "developer":
+        return p.developers;
+
+      default:
+        return p.materials;
     }
   };
   const allMaterials = props.prototypes.reduce((prev, next) => {
@@ -148,11 +154,16 @@ const NetworkTab = (props: {
 }) => {
   return (
     <Box>
-      <MyNetwork
-        prototypes={props.prototypes}
-        target="event"
-        palette={props.palette}
-      />
+      <Stack direction={"column"} spacing={1}>
+        {["event", "material", "tag", "developer"].map((s) => (
+          <MaterialNetwork
+            key={`network-${s}`}
+            prototypes={props.prototypes}
+            target={s as "material" | "event" | "tag" | "developer"}
+            palette={props.palette}
+          />
+        ))}
+      </Stack>
     </Box>
   );
 };
