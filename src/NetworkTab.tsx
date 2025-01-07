@@ -122,7 +122,7 @@ const MaterialNetwork = (props: {
             elements={elements}
             style={{ height: "400px" }}
             stylesheet={stylesheet}
-            layout={{ name: layout, padding: 10 }}
+            layout={{ name: layout }}
           />
         </Box>
       </CardContent>
