@@ -66,6 +66,8 @@ const dumpPrototypeFromRawData = (rawData /* : PrototypeV2RawData*/) => {
     goodCount: rawData.goodCount,
   }
 
+  console.info(`fetching prototype ${proto.name} (${proto.id})`);
+
   // ## Example of API
   // {
   //   "updateDate": "2023-07-25 23:55:19.0",
@@ -140,15 +142,15 @@ const fetchProjectData = async (
     fs.mkdirSync(img_dir);
   }
 
-  const url = `https://protopedia.net/v2/api/prototype/list?materialNm=${materialName}`
+  const url = `https://protopedia.net/v2/api/prototype/list?materialNm=${materialName}&limit=100`
   const res = await axios.get(url, { headers: { Authorization: `Bearer ${token}` } });
-
+  console.info(`fetching data from ${url}`);
   const rawPrototypes = dumpRawPrototypesFromResponseData(res.data);
 
   // NOTE: v2 api solves poor material fetching
 
   const prototypes = rawPrototypes.map(obj => dumpPrototypeFromRawData(obj));
-
+  console.info(`#Prototypes: ${prototypes.length}`);
   // dump to json
   const datetime = Date();
   const s = JSON.stringify({ datetime, prototypes });
