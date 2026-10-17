@@ -33,7 +33,7 @@ const TrendChartCard = (props: { groups: Group[] }) => {
               label: "years",
               height: 50,
               valueFormatter: (y: number) => String(y),
-              tickLabelInterval: (y, _) => years.includes(y),
+              tickLabelInterval: (y) => years.includes(y),
             },
           ]}
           yAxis={[{ label: "#created", width: 60 }]}

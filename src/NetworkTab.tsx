@@ -74,35 +74,35 @@ const WorkNetwork = (props: {
     .filter((pair) => pair.items.length >= minShared)
     .map((pair) => ({
       data: {
-        source: pair.a,
-        target: pair.b,
+        source: String(pair.a),
+        target: String(pair.b),
         shared: pair.items.length,
         label: pair.items.map((s) => s.split("@")[0]).join(", "),
       },
     }));
 
   // works without any link carry no relationship information
-  const degree = new Map<number, number>();
+  const degree = new Map<string, number>();
   edges.forEach((e) => {
     degree.set(e.data.source, (degree.get(e.data.source) ?? 0) + 1);
     degree.set(e.data.target, (degree.get(e.data.target) ?? 0) + 1);
   });
   const nodes = props.prototypes
-    .filter((p) => degree.has(p.id))
+    .filter((p) => degree.has(String(p.id)))
     .map((p) => {
       const ss = p.mainImage?.split("/");
       return {
         data: {
-          id: p.id,
+          id: String(p.id),
           name: p.name,
           img: ss ? `./prototypes/${ss[ss.length - 1]}` : undefined,
           // well-connected works are larger
-          size: 30 + Math.min((degree.get(p.id) ?? 0) * 2, 40),
+          size: 30 + Math.min((degree.get(String(p.id)) ?? 0) * 2, 40),
         },
       };
-    }) as any[];
+    });
 
-  const elements = (nodes as any[]).concat(edges);
+  const elements: cytoscape.ElementDefinition[] = [...nodes, ...edges];
 
   // highlight the hovered node and its neighbors, fade the others
   const cyRef = React.useRef<cytoscape.Core | null>(null);

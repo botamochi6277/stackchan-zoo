@@ -1,0 +1,51 @@
+name: test
+on:
+  pull_request:
+  push:
+    branches-ignore: [main]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    name: lint, type check and build
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v7
+      - name: setup nodejs
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+      - name: install dependencies
+        run: npm ci
+      - name: lint
+        run: npm run lint
+      # src/assets/prototypes_v2.json is git-ignored and normally fetched with the API key,
+      # which is not available to pull requests. Use a sample so that type check and build can run.
+      - name: prepare sample data
+        run: |
+          mkdir -p public/prototypes
+          cat > src/assets/prototypes_v2.json <<'JSON'
+          {
+            "datetime": "sample",
+            "prototypes": [
+              {
+                "name": "sample",
+                "id": 1,
+                "developingStatus": 2,
+                "mainImage": "https://example.com/sample.png",
+                "summary": "sample",
+                "developers": ["developer@sample"],
+                "team": "",
+                "materials": ["ｽﾀｯｸﾁｬﾝ", "M5Stack"],
+                "tags": ["ｽﾀｯｸﾁｬﾝ"],
+                "updateDate": "2024-01-01 00:00:00.0",
+                "createDate": "2024-01-01 00:00:00.0",
+                "viewCount": 0,
+                "goodCount": 0
+              }
+            ]
+          }
+          JSON
+      - name: type check and build
+        run: npm run build

@@ -14,7 +14,7 @@ import DarkModeIcon from "@mui/icons-material/DarkMode";
 
 const MyAppBar = (props: {
   theme: Theme;
-  onToggleTheme?: any; // (event: ChangeEvent<HTMLInputElement>, checked: boolean) => void)
+  onToggleTheme?: () => void;
   name: string;
   avatarUrl?: string;
 }) => {

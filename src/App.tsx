@@ -4,6 +4,7 @@ import {
   Stack,
   ThemeProvider,
   createTheme,
+  type Theme,
 } from "@mui/material";
 import * as React from "react";
 
@@ -48,7 +49,7 @@ function App() {
       },
     }),
   );
-  const toggleTheme = (theme: any) => {
+  const toggleTheme = (theme: Theme) => {
     if (theme.palette.mode === "dark") {
       setTheme(createTheme({ ...my_theme, palette: { mode: "light" } }));
     } else {
