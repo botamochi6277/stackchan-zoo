@@ -4,28 +4,22 @@ import { Card, CardContent, Typography, Box } from "@mui/material";
 import { LineChart } from "@mui/x-charts/LineChart";
 import { BarChart } from "@mui/x-charts/BarChart";
 
-const TrendChartCard = (props: { prototypes: PrototypeV2Data[] }) => {
-  const createdYears = props.prototypes.map((obj) => {
-    const date = new Date(obj.createDate);
-    return date.getFullYear();
-  });
+type Group = { title: string; prototypes: PrototypeV2Data[] };
+
+const TrendChartCard = (props: { groups: Group[] }) => {
+  const createdYears = props.groups.map((group) =>
+    group.prototypes.map((obj) => new Date(obj.createDate).getFullYear())
+  );
 
   //   count year https://qiita.com/saka212/items/408bb17dddefc09004c8
-  //   const count = createdYears.reduce(function (prev, current) {
-  //     prev[current] = (prev[current] || 0) + 1;
-  //     return prev;
-  //   }, {});
-
-  const minYear = Math.min(...createdYears);
-  const maxYear = Math.max(...createdYears);
+  const allYears = createdYears.flat();
+  const minYear = Math.min(...allYears);
+  const maxYear = Math.max(...allYears);
 
   const years = Array.from(
     { length: maxYear - minYear + 1 },
     (_, idx) => minYear + idx
   );
-  const counts = years.map((year) => {
-    return createdYears.filter((y) => y === year).length;
-  });
   return (
     <Card>
       <CardContent>
@@ -43,12 +37,13 @@ const TrendChartCard = (props: { prototypes: PrototypeV2Data[] }) => {
             },
           ]}
           yAxis={[{ label: "#created", width: 60 }]}
-          series={[
-            {
-              curve: "linear",
-              data: counts,
-            },
-          ]}
+          series={props.groups.map((group, idx) => ({
+            curve: "linear",
+            label: group.title,
+            data: years.map(
+              (year) => createdYears[idx].filter((y) => y === year).length
+            ),
+          }))}
           //   width={500}
           height={200}
         />
@@ -58,7 +53,7 @@ const TrendChartCard = (props: { prototypes: PrototypeV2Data[] }) => {
 };
 
 const MaterialsCard = (props: {
-  prototypes: PrototypeV2Data[];
+  groups: Group[];
   target: "material" | "tag";
   minCounts?: number;
 }) => {
@@ -70,32 +65,26 @@ const MaterialsCard = (props: {
       return p.tags;
     }
   };
-  // num. of materials
-  const allMaterials = props.prototypes.reduce((prev, next) => {
-    if (!getter(next)) {
-      return prev;
-    }
-
-    return prev.concat(getter(next) ?? []);
-  }, [] as string[]);
-
-  const uniqueMaterials = Array.from(new Set(allMaterials));
   const minCounts = props.minCounts ?? 10;
 
-  const materialCount = uniqueMaterials.map(
-    (mat) => allMaterials.filter((m) => m === mat).length
-  );
-
-  const tmpItems = uniqueMaterials.map((mat, idx) => {
-    return {
-      name: mat,
-      counts: materialCount[idx],
-    };
+  // name -> counts of each group
+  const counts = new Map<string, number[]>();
+  props.groups.forEach((group, idx) => {
+    group.prototypes.forEach((p) => {
+      (getter(p) ?? []).forEach((name) => {
+        const c = counts.get(name) ?? props.groups.map(() => 0);
+        c[idx] += 1;
+        counts.set(name, c);
+      });
+    });
   });
 
-  const plotItems = tmpItems
-    .filter((item) => item.counts >= minCounts)
-    .sort((a, b) => b.counts - a.counts);
+  // show an item when any group reaches minCounts
+  const plotItems = Array.from(counts.entries())
+    .filter(([, c]) => c.some((n) => n >= minCounts))
+    .sort(
+      ([, a], [, b]) => b.reduce((x, y) => x + y, 0) - a.reduce((x, y) => x + y, 0)
+    );
 
   return (
     <Card>
@@ -106,16 +95,14 @@ const MaterialsCard = (props: {
         <BarChart
           //   width={500}
           height={300}
-          series={[
-            {
-              data: plotItems.map((item) => item.counts),
-              label: `#${props.target}s`,
-            },
-          ]}
+          series={props.groups.map((group, idx) => ({
+            data: plotItems.map(([, c]) => c[idx]),
+            label: group.title,
+          }))}
           xAxis={[{ height: 40 }]}
           yAxis={[
             {
-              data: plotItems.map((item) => item.name),
+              data: plotItems.map(([name]) => name),
               scaleType: "band",
               width: 160,
             },
@@ -128,17 +115,12 @@ const MaterialsCard = (props: {
   );
 };
 
-const StatsTab = (props: { prototypes: PrototypeV2Data[] }) => {
+const StatsTab = (props: { groups: Group[] }) => {
   return (
     <Box>
-      <TrendChartCard prototypes={props.prototypes} />
-      <MaterialsCard
-        prototypes={props.prototypes}
-        target="material"
-        minCounts={5}
-      />
-
-      <MaterialsCard prototypes={props.prototypes} target="tag" minCounts={5} />
+      <TrendChartCard groups={props.groups} />
+      <MaterialsCard groups={props.groups} target="material" minCounts={5} />
+      <MaterialsCard groups={props.groups} target="tag" minCounts={5} />
     </Box>
   );
 };
