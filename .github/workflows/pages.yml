@@ -23,7 +23,7 @@ jobs:
         run: |
           mkdir public/prototypes
           echo ${{vars.PROTOPEDIA_MATERIAL_NAME}} 
-          node scripts/fetch_prototype_v2.js ${{vars.PROTOPEDIA_MATERIAL_NAME}} ${{secrets.PROTOPEDIA_API_KEY}}
+          node scripts/fetch_prototype_v2.js ${{vars.PROTOPEDIA_MATERIAL_NAME}} ${{secrets.PROTOPEDIA_API_KEY}} --tag "${{vars.PROTOPEDIA_TAG_NAME || 'ｽﾀｯｸﾁｬﾝ'}}"
       - name: build pages
         run: |
           npm run build
