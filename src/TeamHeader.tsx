@@ -8,7 +8,7 @@ import {
   Stack,
   Typography
 } from "@mui/material";
-import Grid from '@mui/material/Unstable_Grid2';
+import Grid from '@mui/material/Grid';
 
 
 interface Social {
@@ -24,7 +24,7 @@ export default function TeamHeader(
   return (
     <Card >
       <Grid container spacing={2}>
-        <Grid xs={0} sm={4}
+        <Grid size={{ xs: 0, sm: 4 }}
           sx={{
             display: { xs: "none", sm: "flex" },
             justifyContent: "center",
@@ -42,7 +42,7 @@ export default function TeamHeader(
             src={props.avatar_img}
           />
         </Grid>
-        <Grid xs={12} sm={8}>
+        <Grid size={{ xs: 12, sm: 8 }}>
           <CardContent>
             <Typography component="div" variant="h3">
               {props.team_name}
@@ -58,7 +58,7 @@ export default function TeamHeader(
 
           <CardActions>
 
-            <Stack direction={"row"} spacing={1} useFlexGap flexWrap="wrap">
+            <Stack direction={"row"} spacing={1} useFlexGap sx={{ flexWrap: "wrap" }}>
               {props.socials.map(item => (
                 <Link
                   component="a"

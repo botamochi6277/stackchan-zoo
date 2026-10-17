@@ -7,7 +7,7 @@ import {
   ListItem,
   ListItemText,
 } from "@mui/material";
-import Grid from "@mui/material/Unstable_Grid2";
+import Grid from "@mui/material/Grid";
 
 // icons
 import PinIcon from "@mui/icons-material/Pin";
@@ -43,11 +43,12 @@ const OrderButtons = (props: {
 export default function ProtoPediaList(props: {
   prototypes: PrototypeV2Data[];
 }) {
-  const [order, setOrder] = React.useState("ids");
+  const [order, setOrder] = React.useState("views");
 
   const mySort = (a: PrototypeV2Data, b: PrototypeV2Data, order: string) => {
     switch (order) {
       case "ids":
+        // actually this is create date. smaller id means older.
         return a.id - b.id; // decrease
       case "views":
         return b.viewCount - a.viewCount;
@@ -103,7 +104,7 @@ export default function ProtoPediaList(props: {
 
       <Grid container spacing={2}>
         {items.map((item, idx) => (
-          <Grid xs={12} sm={6} md={4} key={idx}>
+          <Grid size={{ xs: 12, sm: 6, md: 4 }} key={idx}>
             {item}
           </Grid>
         ))}

@@ -37,10 +37,12 @@ const TrendChartCard = (props: { prototypes: PrototypeV2Data[] }) => {
             {
               data: years,
               label: "years",
+              height: 50,
+              valueFormatter: (y: number) => String(y),
               tickLabelInterval: (y, _) => years.includes(y),
             },
           ]}
-          yAxis={[{ label: "#created" }]}
+          yAxis={[{ label: "#created", width: 60 }]}
           series={[
             {
               curve: "linear",
@@ -110,14 +112,15 @@ const MaterialsCard = (props: {
               label: `#${props.target}s`,
             },
           ]}
+          xAxis={[{ height: 40 }]}
           yAxis={[
             {
               data: plotItems.map((item) => item.name),
               scaleType: "band",
+              width: 160,
             },
           ]}
           layout="horizontal"
-          margin={{ left: 160 }}
           grid={{ vertical: true }}
         />
       </CardContent>
