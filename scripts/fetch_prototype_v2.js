@@ -17,6 +17,11 @@ const args = yargs(hideBin(process.argv))
     type: "string",
     demandOption: true,
   })
+  .option("tag", {
+    describe: "tag name to also fetch. Works with this tag are merged with the materialName results.",
+    default: "ｽﾀｯｸﾁｬﾝ",
+    type: "string"
+  })
   .option("output", {
     alias: "o",
     default: "src/assets/prototypes_v2.json",
@@ -127,8 +132,18 @@ const fetchMaterials = async (token/*: string*/, prototype_id/*: number*/) => {
 
 }
 
+const fetchRawPrototypes = async (token, query) => {
+  const url = 'https://protopedia.net/v2/api/prototype/list';
+  console.info(`fetching data from ${url} (${JSON.stringify(query)})`);
+  const res = await axios.get(url, {
+    headers: { Authorization: `Bearer ${token}` },
+    params: { ...query, limit: 100 },
+  });
+  return dumpRawPrototypesFromResponseData(res.data) ?? [];
+}
+
 const fetchProjectData = async (
-  token/*: string*/, materialName/*: string*/, output, img_dir) => {
+  token/*: string*/, materialName/*: string*/, tag/*: string*/, output, img_dir) => {
   // input validation
   const token_ref = token.match(/[a-f0-9]{32}/g);
   if (!token_ref) {
@@ -142,14 +157,16 @@ const fetchProjectData = async (
     fs.mkdirSync(img_dir);
   }
 
-  const url = `https://protopedia.net/v2/api/prototype/list?materialNm=${materialName}&limit=100`
-  const res = await axios.get(url, { headers: { Authorization: `Bearer ${token}` } });
-  console.info(`fetching data from ${url}`);
-  const rawPrototypes = dumpRawPrototypesFromResponseData(res.data);
-
   // NOTE: v2 api solves poor material fetching
+  const rawPrototypes = await fetchRawPrototypes(token, { materialNm: materialName });
+  if (tag) {
+    // works tagged with `tag` may not use the material, so fetch them separately
+    rawPrototypes.push(...await fetchRawPrototypes(token, { tagNm: tag }));
+  }
 
-  const prototypes = rawPrototypes.map(obj => dumpPrototypeFromRawData(obj));
+  // merge by id (a work can match both queries)
+  const uniqueRawPrototypes = [...new Map(rawPrototypes.map(r => [r.id, r])).values()];
+  const prototypes = uniqueRawPrototypes.map(obj => dumpPrototypeFromRawData(obj));
   console.info(`#Prototypes: ${prototypes.length}`);
   // dump to json
   const datetime = Date();
@@ -164,5 +181,5 @@ const fetchProjectData = async (
   })
 }
 
-fetchProjectData(args.api_key, args.materialName, args.output, args.img_dir);
+fetchProjectData(args.api_key, args.materialName, args.tag, args.output, args.img_dir);
 

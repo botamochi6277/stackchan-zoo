@@ -126,7 +126,7 @@ const ProtoTypeCard = (props: { prototype: PrototypeV2Data }) => {
 
         <DevelopersTypography developers={prototype.developers} />
         <Box sx={{ marginBottom: 1 }}>
-          <Stack direction="row" alignItems="center" spacing={0.5}>
+          <Stack direction="row" spacing={0.5} sx={{ alignItems: "center" }}>
             <DevelopingStatusBadge status={prototype.developingStatus} />
             <CountBadge name="view" count={prototype.viewCount} logo="eye" />
             <CountBadge

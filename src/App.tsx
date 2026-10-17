@@ -4,6 +4,7 @@ import {
   Stack,
   ThemeProvider,
   createTheme,
+  type Theme,
 } from "@mui/material";
 import * as React from "react";
 
@@ -26,6 +27,18 @@ import { QuestionMark as QuestionMarkIcon } from "@mui/icons-material";
 import QueryStatsIcon from "@mui/icons-material/QueryStats";
 import CollectionsIcon from "@mui/icons-material/Collections";
 import HubIcon from "@mui/icons-material/Hub";
+import TagIcon from "@mui/icons-material/Tag";
+
+// ProtoPedia tag / material for stack-chan (ｽﾀｯｸﾁｬﾝ)
+const STACKCHAN_TAG = "ｽﾀｯｸﾁｬﾝ";
+const STACKCHAN_MATERIAL = "ｽﾀｯｸﾁｬﾝ";
+
+// works with the stack-chan material
+const isStackchanWork = (p: PrototypeV2Data) =>
+  !!p.materials?.includes(STACKCHAN_MATERIAL);
+// works tagged as stack-chan but without the stack-chan material
+const isStackchanRelatedWork = (p: PrototypeV2Data) =>
+  !!p.tags?.includes(STACKCHAN_TAG) && !isStackchanWork(p);
 
 function App() {
   const [theme, setTheme] = React.useState(
@@ -34,9 +47,9 @@ function App() {
       palette: {
         mode: "dark",
       },
-    })
+    }),
   );
-  const toggleTheme = (theme: any) => {
+  const toggleTheme = (theme: Theme) => {
     if (theme.palette.mode === "dark") {
       setTheme(createTheme({ ...my_theme, palette: { mode: "light" } }));
     } else {
@@ -83,17 +96,56 @@ function App() {
           <MyTabs
             key={"my_tabs"}
             items={[
+              // ProtoPediaList for stack-chan materials
+              // developer assume these works as "stack-chan" works
               {
                 icon: <CollectionsIcon fontSize="small" />,
-                label: "ProtoPedia Works",
+                label: `${STACKCHAN_MATERIAL} in ProtoPedia`,
                 content: (
-                  <ProtoPediaList prototypes={protopediaData.prototypes} />
+                  <ProtoPediaList
+                    prototypes={protopediaData.prototypes.filter((p) =>
+                      p.materials?.includes(STACKCHAN_MATERIAL),
+                    )}
+                    species="stack-chans"
+                  />
+                ),
+              },
+              // Works related to Stackchan
+              {
+                icon: <TagIcon fontSize="small" />,
+                label: `${STACKCHAN_TAG}関連作品`,
+                content: (
+                  <ProtoPediaList
+                    // tagged, but without the stack-chan material
+                    prototypes={protopediaData.prototypes.filter(
+                      (p) =>
+                        p.tags?.includes(STACKCHAN_TAG) &&
+                        !p.materials?.includes(STACKCHAN_MATERIAL),
+                    )}
+                    species="stack-chan-related items"
+                  />
                 ),
               },
               {
                 icon: <QueryStatsIcon fontSize="small" />,
                 label: "Stats",
-                content: <StatsTab prototypes={protopediaData.prototypes} />,
+                content: (
+                  <StatsTab
+                    groups={[
+                      {
+                        title: "ｽﾀｯｸﾁｬﾝ",
+                        prototypes:
+                          protopediaData.prototypes.filter(isStackchanWork),
+                      },
+                      {
+                        title: "ｽﾀｯｸﾁｬﾝ関連",
+                        prototypes: protopediaData.prototypes.filter(
+                          isStackchanRelatedWork,
+                        ),
+                      },
+                    ]}
+                  />
+                ),
               },
               {
                 icon: <HubIcon fontSize="small" />,

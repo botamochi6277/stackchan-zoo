@@ -6,8 +6,9 @@ import {
   Typography,
   ListItem,
   ListItemText,
+  Tooltip,
 } from "@mui/material";
-import Grid from "@mui/material/Unstable_Grid2";
+import Grid from "@mui/material/Grid";
 
 // icons
 import PinIcon from "@mui/icons-material/Pin";
@@ -21,20 +22,22 @@ import ProtoTypeCard from "./PrototypeCard";
 
 const OrderButtons = (props: {
   currentOrder: string;
-  items: { order: string; icon: React.ReactElement }[];
+  items: { order: string; icon: React.ReactElement; tooltip: string }[];
   setOrder: (s: string) => void;
 }) => {
   const buttons = props.items.map((item) => {
     return (
-      <IconButton
-        key={`btn-${item.order}`}
-        color={item.order === props.currentOrder ? "primary" : "default"}
-        onClick={() => {
-          props.setOrder(item.order);
-        }}
-      >
-        {item.icon}
-      </IconButton>
+      <Tooltip key={`btn-${item.order}`} title={item.tooltip}>
+        <IconButton
+          aria-label={item.tooltip}
+          color={item.order === props.currentOrder ? "primary" : "default"}
+          onClick={() => {
+            props.setOrder(item.order);
+          }}
+        >
+          {item.icon}
+        </IconButton>
+      </Tooltip>
     );
   });
   return buttons;
@@ -42,12 +45,14 @@ const OrderButtons = (props: {
 
 export default function ProtoPediaList(props: {
   prototypes: PrototypeV2Data[];
+  species?: string;
 }) {
-  const [order, setOrder] = React.useState("ids");
+  const [order, setOrder] = React.useState("views");
 
   const mySort = (a: PrototypeV2Data, b: PrototypeV2Data, order: string) => {
     switch (order) {
       case "ids":
+        // actually this is create date. smaller id means older.
         return a.id - b.id; // decrease
       case "views":
         return b.viewCount - a.viewCount;
@@ -82,7 +87,9 @@ export default function ProtoPediaList(props: {
           src={`https://custom-icon-badges.demolab.com/badge/stackchans-${items.length}-blue.svg?logo=people&logoColor=gray&style=social`}
           key={"counter"}
         /> */}
-        <Typography>{items.length} stack-chans are in this zoo.</Typography>
+        <Typography>
+          {items.length} {props.species || "items"} are in this zoo.
+        </Typography>
 
         {/* sorting radio-like buttons */}
 
@@ -92,10 +99,18 @@ export default function ProtoPediaList(props: {
             currentOrder={order}
             setOrder={setOrder}
             items={[
-              { order: "ids", icon: <PinIcon /> },
-              { order: "views", icon: <VisibilityIcon /> },
-              { order: "goods", icon: <ThumbUpIcon /> },
-              { order: "updatedDate", icon: <UpdateIcon /> },
+              { order: "ids", icon: <PinIcon />, tooltip: "Oldest first" },
+              {
+                order: "views",
+                icon: <VisibilityIcon />,
+                tooltip: "Most viewed",
+              },
+              { order: "goods", icon: <ThumbUpIcon />, tooltip: "Most liked" },
+              {
+                order: "updatedDate",
+                icon: <UpdateIcon />,
+                tooltip: "Recently updated",
+              },
             ]}
           />
         </ListItem>
@@ -103,7 +118,7 @@ export default function ProtoPediaList(props: {
 
       <Grid container spacing={2}>
         {items.map((item, idx) => (
-          <Grid xs={12} sm={6} md={4} key={idx}>
+          <Grid size={{ xs: 12, sm: 6, md: 4 }} key={idx}>
             {item}
           </Grid>
         ))}
