@@ -6,6 +6,7 @@ import {
   Typography,
   ListItem,
   ListItemText,
+  Tooltip,
 } from "@mui/material";
 import Grid from "@mui/material/Grid";
 
@@ -21,20 +22,22 @@ import ProtoTypeCard from "./PrototypeCard";
 
 const OrderButtons = (props: {
   currentOrder: string;
-  items: { order: string; icon: React.ReactElement }[];
+  items: { order: string; icon: React.ReactElement; tooltip: string }[];
   setOrder: (s: string) => void;
 }) => {
   const buttons = props.items.map((item) => {
     return (
-      <IconButton
-        key={`btn-${item.order}`}
-        color={item.order === props.currentOrder ? "primary" : "default"}
-        onClick={() => {
-          props.setOrder(item.order);
-        }}
-      >
-        {item.icon}
-      </IconButton>
+      <Tooltip key={`btn-${item.order}`} title={item.tooltip}>
+        <IconButton
+          aria-label={item.tooltip}
+          color={item.order === props.currentOrder ? "primary" : "default"}
+          onClick={() => {
+            props.setOrder(item.order);
+          }}
+        >
+          {item.icon}
+        </IconButton>
+      </Tooltip>
     );
   });
   return buttons;
@@ -93,10 +96,10 @@ export default function ProtoPediaList(props: {
             currentOrder={order}
             setOrder={setOrder}
             items={[
-              { order: "ids", icon: <PinIcon /> },
-              { order: "views", icon: <VisibilityIcon /> },
-              { order: "goods", icon: <ThumbUpIcon /> },
-              { order: "updatedDate", icon: <UpdateIcon /> },
+              { order: "ids", icon: <PinIcon />, tooltip: "Oldest first" },
+              { order: "views", icon: <VisibilityIcon />, tooltip: "Most viewed" },
+              { order: "goods", icon: <ThumbUpIcon />, tooltip: "Most liked" },
+              { order: "updatedDate", icon: <UpdateIcon />, tooltip: "Recently updated" },
             ]}
           />
         </ListItem>
