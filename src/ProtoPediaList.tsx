@@ -45,6 +45,7 @@ const OrderButtons = (props: {
 
 export default function ProtoPediaList(props: {
   prototypes: PrototypeV2Data[];
+  species?: string;
 }) {
   const [order, setOrder] = React.useState("views");
 
@@ -86,7 +87,9 @@ export default function ProtoPediaList(props: {
           src={`https://custom-icon-badges.demolab.com/badge/stackchans-${items.length}-blue.svg?logo=people&logoColor=gray&style=social`}
           key={"counter"}
         /> */}
-        <Typography>{items.length} stack-chans are in this zoo.</Typography>
+        <Typography>
+          {items.length} {props.species || "items"} are in this zoo.
+        </Typography>
 
         {/* sorting radio-like buttons */}
 
@@ -97,9 +100,17 @@ export default function ProtoPediaList(props: {
             setOrder={setOrder}
             items={[
               { order: "ids", icon: <PinIcon />, tooltip: "Oldest first" },
-              { order: "views", icon: <VisibilityIcon />, tooltip: "Most viewed" },
+              {
+                order: "views",
+                icon: <VisibilityIcon />,
+                tooltip: "Most viewed",
+              },
               { order: "goods", icon: <ThumbUpIcon />, tooltip: "Most liked" },
-              { order: "updatedDate", icon: <UpdateIcon />, tooltip: "Recently updated" },
+              {
+                order: "updatedDate",
+                icon: <UpdateIcon />,
+                tooltip: "Recently updated",
+              },
             ]}
           />
         </ListItem>

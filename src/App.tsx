@@ -105,6 +105,7 @@ function App() {
                     prototypes={protopediaData.prototypes.filter((p) =>
                       p.materials?.includes(STACKCHAN_MATERIAL),
                     )}
+                    species="stack-chans"
                   />
                 ),
               },
@@ -120,6 +121,7 @@ function App() {
                         p.tags?.includes(STACKCHAN_TAG) &&
                         !p.materials?.includes(STACKCHAN_MATERIAL),
                     )}
+                    species="stack-chan-related items"
                   />
                 ),
               },
@@ -137,7 +139,7 @@ function App() {
                       {
                         title: "ｽﾀｯｸﾁｬﾝ関連",
                         prototypes: protopediaData.prototypes.filter(
-                          isStackchanRelatedWork
+                          isStackchanRelatedWork,
                         ),
                       },
                     ]}
